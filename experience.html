@@ -1,0 +1,225 @@
+﻿<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#d5e3ff","on-background":"#1c1b1b","primary-fixed-dim":"#a7c8ff","surface-dim":"#dcd9d9","tertiary":"#3f4140","background":"#fcf9f8","on-secondary-container":"#335682","on-tertiary-fixed-variant":"#454746","on-primary":"#ffffff","secondary":"#3e608c","on-tertiary":"#ffffff","secondary-container":"#aacbfe","tertiary-fixed":"#e2e3e1","tertiary-container":"#575857","on-error-container":"#93000a","primary-container":"#0058a6","on-secondary-fixed":"#001c39","outline":"#727782","inverse-surface":"#313030","on-tertiary-fixed":"#1a1c1b","inverse-on-surface":"#f3f0ef","on-error":"#ffffff","surface-container-high":"#ebe7e7","on-primary-fixed":"#001c3b","tertiary-fixed-dim":"#c6c7c5","on-tertiary-container":"#cececd","secondary-fixed":"#d4e3ff","inverse-primary":"#a7c8ff","error":"#ba1a1a","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","surface":"#fcf9f8","surface-tint":"#135fad","error-container":"#ffdad6","on-primary-fixed-variant":"#004787","on-surface-variant":"#424751","on-secondary-fixed-variant":"#244873","primary":"#00417d","surface-container-low":"#f6f3f2","surface-bright":"#fcf9f8","surface-variant":"#e5e2e1","on-surface":"#1c1b1b","on-primary-container":"#b4d0ff","surface-container-highest":"#e5e2e1","outline-variant":"#c2c6d3","secondary-fixed-dim":"#a7c8fb","surface-container":"#f0edec"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"20px","element-gap":"24px","section-padding":"120px","gutter":"32px","container-max":"1440px"},"fontFamily":{"headline-md":["Poppins"],"display-xl-mobile":["Poppins"],"body-md":["Poppins"],"headline-lg":["Poppins"],"display-xl":["Poppins"],"body-lg":["Poppins"],"label-caps":["Poppins"],"headline-lg-mobile":["Poppins"],"meta":["Poppins"]},"fontSize":{"headline-md":["30px",{"lineHeight":"1.4","fontWeight":"600"}],"display-xl-mobile":["40px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"headline-lg":["48px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"600"}],"display-xl":["72px",{"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"700"}],"body-lg":["20px",{"lineHeight":"1.6","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"1.0","letterSpacing":"0.1em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"1.3","fontWeight":"600"}],"meta":["14px",{"lineHeight":"1.4","fontWeight":"500"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300"><div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-gutter flex items-center justify-between"><div class="flex items-center gap-2"><a href="index.html"><img src="logoraul.png" alt="Raul Mahya Logo" class="h-10 w-auto object-contain"></a></div><nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary font-bold">
+    <a class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="index.html">Beranda</a>
+    <div class="relative group">
+        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Tentang <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
+            <a href="about.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Profil</a>
+            <a href="education.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Pendidikan</a>
+            <a href="gallery.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Galeri</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Pengalaman <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
+            <a href="experience.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Lini Masa Karir</a>
+            <a href="projects.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Proyek Pilihan</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Kemampuan <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
+            <a href="technology.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Tumpukan Teknologi</a>
+            <a href="expertise.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Keahlian</a>
+        </div>
+    </div>
+</nav><div class="flex items-center gap-6"><a class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-lg text-meta font-bold hover:bg-on-primary-fixed-variant transition-all shadow-sm" href="#">Mari Bekerja Sama</a><button class="xl:hidden material-symbols-outlined text-on-surface">menu</button></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-gutter w-full py-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-element-gap lg:gap-gutter">
+<!-- Left Column: Sticky Title & Decorative Visualization -->
+<div class="col-span-1 lg:col-span-4 relative">
+<div class="sticky top-32 flex flex-col gap-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">Lintasan Karir</span>
+<h2 class="font-display-xl-mobile text-display-xl-mobile lg:font-display-xl lg:text-display-xl text-on-surface mb-6">Pengalaman<br/>Profesional.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Rekam jejak dalam merekayasa sistem ERP yang dapat diskalakan, layanan mikro, dan perangkat lunak perusahaan khusus di berbagai industri.
+                        </p>
+</div>
+<!-- Decorative Visual: Career Progression Graphic -->
+<div class="hidden lg:block bg-surface-container p-6 rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-12 -bottom-12 w-32 h-32 bg-secondary/10 rounded-full blur-2xl"></div>
+<h4 class="font-meta text-meta text-on-surface mb-6">Dampak &amp; Skala</h4>
+<div class="flex items-end gap-2 h-32 w-full mt-4">
+<div class="w-1/5 bg-surface-variant hover:bg-primary transition-colors h-[20%] rounded-t-sm"></div>
+<div class="w-1/5 bg-surface-variant hover:bg-primary transition-colors h-[35%] rounded-t-sm"></div>
+<div class="w-1/5 bg-surface-variant hover:bg-primary transition-colors h-[50%] rounded-t-sm"></div>
+<div class="w-1/5 bg-surface-variant hover:bg-primary transition-colors h-[75%] rounded-t-sm"></div>
+<div class="w-1/5 bg-primary shadow-sm h-[100%] rounded-t-sm relative group cursor-pointer">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface text-inverse-on-surface font-label-caps text-[10px] py-1 px-2 rounded whitespace-nowrap">Sekarang</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Vertical Timeline -->
+<div class="col-span-1 lg:col-span-8 relative mt-12 lg:mt-0">
+<!-- Timeline Vertical Line -->
+<div class="absolute left-[31px] top-4 bottom-8 w-[2px] bg-surface-variant z-0 hidden sm:block"></div>
+<div class="flex flex-col gap-12 sm:gap-16">
+<!-- Timeline Node 1 -->
+<div class="relative sm:pl-[80px] group">
+<!-- Node Marker -->
+<div class="absolute left-[28px] top-8 w-2 h-2 rounded-full bg-primary shadow-[0_0_0_8px_theme(colors.surface)] z-10 transition-transform duration-300 group-hover:scale-150 hidden sm:block"></div>
+<!-- Node Content Card -->
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full pointer-events-none"></div>
+<div class="font-meta text-meta text-on-surface-variant mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                                Agu 2025 â€” Sekarang
+                            </div>
+<div class="flex flex-col sm:flex-row items-start gap-6 mb-6">
+<div class="w-16 h-16 rounded-xl bg-surface flex-shrink-0 overflow-hidden shadow-sm p-1">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A minimalist and sleek corporate logo for Andalan Group featuring an interlocking geometric 'A' in dark blue tones, designed with a clean vector aesthetic, placed on a pristine white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXSNAfeMjUjlY079zI3skFES47LG01WfGv_oGsyb4h4e1JvXfjkXsTuRqm4Da56DkL3AWh5Qs59cTdtPfR56cVODsDXGsUterGS0CNWEtUlKBadeTwOQPC0-rk6ZyzOOSVJoAcm2g-3q9Z-LKoTyNbkN8QO78YbnZe2gF0K0g8biBW1m1JcIDkgaWLspn6E8IqgXJ8h6pGLN7Uy8XyeI9hIykEsfnBkEHiM_nokGpgbAt4F6VCx_OeqQ"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">IT Specialist</h3>
+<p class="font-body-lg text-body-lg text-primary font-medium">Andalan Group</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed max-w-2xl">
+                                Memelopori transformasi TI di seluruh perusahaan dengan merancang dan mengembangkan sistem operasional yang tangguh. Merancang alur kerja yang mulus untuk rantai pasokan dan operasi keuangan, secara signifikan mengurangi overhead manual dan meningkatkan akurasi data lintas departemen.
+                            </p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Mandala System (Workflow)</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Mine-Pro (ERP)</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Finance ERP</span>
+</div>
+<button class="font-meta text-meta text-primary flex items-center gap-2 group/btn bg-primary/5 hover:bg-primary/10 px-5 py-2.5 rounded-lg transition-colors">
+                                Lihat Detail Pengalaman
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Timeline Node 2 -->
+<div class="relative sm:pl-[80px] group">
+<div class="absolute left-[28px] top-8 w-2 h-2 rounded-full bg-primary shadow-[0_0_0_8px_theme(colors.surface)] z-10 transition-transform duration-300 group-hover:scale-150 hidden sm:block"></div>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+<div class="font-meta text-meta text-on-surface-variant mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                                Mei 2025 â€” Agu 2025
+                            </div>
+<div class="flex flex-col sm:flex-row items-start gap-6 mb-6">
+<div class="w-16 h-16 rounded-xl bg-surface flex-shrink-0 overflow-hidden shadow-sm p-1">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A modern tech startup logo for PT Wibicon Karya Muda featuring an abstract W symbol in varying shades of tech blue and steel gray, highly polished flat vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhgz58Vds2tkKR2j_-G8Tz7BnoidEP3R2m3n3MSCaOcUBhvoHPjqetQdOrghWyVhHqhXdLcDGnQUJeqpJp28c8aZMWL011D3MeUty8xvd9eyzbcydiwAvYoEYBkFPxPS8EJggPTdT6b5ppQUuLKAK6d9nDb33aRhG9g8rqkFhfkM2zT74fTpeOgUY97SzzslE4a58aeno6pdSuKw_0GUF_Ey7nJjibmSLDS5jhzmAc1rg7_MVkbPH3aw"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Odoo Developer</h3>
+<p class="font-body-lg text-body-lg text-primary font-medium">PT Wibicon Karya Muda</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed max-w-2xl">
+                                Bekerja khusus dalam menyesuaikan dan memperluas modul Odoo ERP agar sesuai dengan logika bisnis khusus. Menyederhanakan operasi klien dengan mengotomatiskan jalur pelaporan dan meningkatkan presisi pelacakan inventaris melalui skrip Python dan tampilan XML khusus.
+                            </p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Odoo ERP</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Python</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">PostgreSQL</span>
+</div>
+<button class="font-meta text-meta text-primary flex items-center gap-2 group/btn bg-primary/5 hover:bg-primary/10 px-5 py-2.5 rounded-lg transition-colors">
+                                Lihat Detail Pengalaman
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Timeline Node 3 -->
+<div class="relative sm:pl-[80px] group">
+<div class="absolute left-[28px] top-8 w-2 h-2 rounded-full bg-primary shadow-[0_0_0_8px_theme(colors.surface)] z-10 transition-transform duration-300 group-hover:scale-150 hidden sm:block"></div>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+<div class="font-meta text-meta text-on-surface-variant mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                                Des 2024 â€” Jul 2025
+                            </div>
+<div class="flex flex-col sm:flex-row items-start gap-6 mb-6">
+<div class="w-16 h-16 rounded-xl bg-surface flex-shrink-0 overflow-hidden shadow-sm p-1">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A heavy machinery and logistics corporate logo for Trackindo / Cipta Kridatama, utilizing strong structural typography and a vibrant yellow and black accent, isolated on white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXgRXzY_YPHlConcetRnmhsdQIuXywe9C1HcP-k0hh1Mqqfid_s7ADPBzvwd8YaD7USRua4vFi0Y-PkkHhy5yUgBgS-Bwql6yY1w6k_Fv60MTTkstZWQTlwfsi4bCHtofZqvjCIiJEn7x2jbYzDDUpdxIgsgfEE0oARwjkEu7fFMCPSKrd7cUms60_sCkVt1-WmOznNVWwi2HUN5k7jpJ1R7-yAnSefTNVgR2UA-8A3jjhpoB5aK3_kw"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Software Engineer</h3>
+<p class="font-body-lg text-body-lg text-primary font-medium">Trackindo / Cipta Kridatama</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed max-w-2xl">
+                                Merekayasa aplikasi logistik alat berat inti dan manajemen tender. Membangun aplikasi Pemantauan Tender untuk memastikan transparansi dan kepatuhan, serta memainkan peran kunci dalam merancang platform ERP 'Cassis' untuk administrasi aset internal.
+                            </p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Tender Monitoring</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">ERP Cassis</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Systems Architecture</span>
+</div>
+<button class="font-meta text-meta text-primary flex items-center gap-2 group/btn bg-primary/5 hover:bg-primary/10 px-5 py-2.5 rounded-lg transition-colors">
+                                Lihat Detail Pengalaman
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Timeline Node 4 -->
+<div class="relative sm:pl-[80px] group">
+<div class="absolute left-[28px] top-8 w-2 h-2 rounded-full bg-primary shadow-[0_0_0_8px_theme(colors.surface)] z-10 transition-transform duration-300 group-hover:scale-150 hidden sm:block"></div>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+<div class="font-meta text-meta text-on-surface-variant mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                                Jun 2024 â€” Des 2024
+                            </div>
+<div class="flex flex-col sm:flex-row items-start gap-6 mb-6">
+<div class="w-16 h-16 rounded-xl bg-surface flex-shrink-0 overflow-hidden shadow-sm p-1">
+<img class="w-full h-full object-cover rounded-lg" data-alt="An IT solutions company logo for PT Asia Sistem Indonesia showing a digital globe network graphic rendered in primary blue and cyan, sleek business vector graphics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtB04IE81tfZAkGfEvB3xjdBGQ8sJrqw5h9bCVithlkOmGWHwbBu-MUJW2WxF9hA4v3YlbQHc0LCIuqUICjhLmYpvJq3qAF7HOa8HXHMkD7nhPa3CiK2ILJ1d5KhuBMZUe4wvs1LbYel75XdeNspFoT2kDB1LRx-Qsg3R5FrDjqDF02Y06GdgBUbADKSflbgAE9tvh3BygbAGUd0vE81iZumnboWd4J_BmY2u_-zqbLA69hjgfQrk7BA"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Project Manager &amp; R&amp;D</h3>
+<p class="font-body-lg text-body-lg text-primary font-medium">PT Asia Sistem Indonesia</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed max-w-2xl">
+                                Mengarahkan tim pengembangan tangkas yang memberikan proyek TI perusahaan berisiko tinggi. Memimpin inisiatif penelitian dan pengembangan yang menilai teknologi cloud yang muncul untuk memodernisasi arsitektur klien lama, menyeimbangkan kelayakan teknis dengan hasil bisnis.
+                            </p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Agile Management</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Cloud R&amp;D</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Client Relations</span>
+</div>
+<button class="font-meta text-meta text-primary flex items-center gap-2 group/btn bg-primary/5 hover:bg-primary/10 px-5 py-2.5 rounded-lg transition-colors">
+                                Lihat Detail Pengalaman
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Timeline Node 5 -->
+<div class="relative sm:pl-[80px] group">
+<div class="absolute left-[28px] top-8 w-2 h-2 rounded-full bg-primary shadow-[0_0_0_8px_theme(colors.surface)] z-10 transition-transform duration-300 group-hover:scale-150 hidden sm:block"></div>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+<div class="font-meta text-meta text-on-surface-variant mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                                Mar 2023 â€” Feb 2024
+                            </div>
+<div class="flex flex-col sm:flex-row items-start gap-6 mb-6">
+<div class="w-16 h-16 rounded-xl bg-surface flex-shrink-0 overflow-hidden shadow-sm p-1">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A minimalist educational or corporate academy logo for Telkom Corporate University utilizing bold red and white geometry, clean tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5pLoE2wDL-lvqN8usBiTNEVVaQCqXKtkDvoFmznCy872wscQxGdn-WNpsDLHNuRVrB8PdrWjq8MVOVNon2XYMnHuJ5xL3PbLlhmTxZuXhIddrXYnbEEihe__m_4OWKE56QrA-7cg8WmRBPcsCkmn9YMWBH8wdr5zvrigBFGOom7BbCcC1TPAzZW9rSXZnpRlkKxXgGVLAqNRdb4ibXaMA975Yyk3cQsD1070nD0aOB-FJ_hRCDVogAw"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Backend Developer</h3>
+<p class="font-body-lg text-body-lg text-primary font-medium">Telkom Corporate University</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed max-w-2xl">
+                                Merancang dan menyebarkan layanan mikro berkinerja tinggi untuk platform manajemen dan administrasi pembelajaran internal. Mengeksekusi strategi migrasi data yang kompleks tanpa waktu henti di berbagai sistem lama yang berbeda ke repositori cloud terpadu.
+                            </p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Microservices</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">Data Migration</span>
+<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full font-meta text-meta hover:bg-primary hover:text-on-primary transition-colors cursor-default">API Design</span>
+</div>
+<button class="font-meta text-meta text-primary flex items-center gap-2 group/btn bg-primary/5 hover:bg-primary/10 px-5 py-2.5 rounded-lg transition-colors">
+                                Lihat Detail Pengalaman
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container border-t border-outline-variant/30 py-section-padding"><div class="max-w-container-max mx-auto px-margin-mobile lg:px-gutter"><div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-outline-variant/30 pb-element-gap mb-element-gap"><div class="max-w-md"><h3 class="font-headline-md text-headline-md text-on-surface mb-2">Raul Mahya Komaran</h3><p class="text-body-md text-on-surface-variant italic">Membangun Sistem yang Menyelesaikan Masalah Bisnis Nyata</p></div><div class="flex gap-6"><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-meta" href="#"><span class="material-symbols-outlined text-[20px]">link</span>LinkedIn</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-meta" href="#"><span class="material-symbols-outlined text-[20px]">code</span>GitHub</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-meta" href="#"><span class="material-symbols-outlined text-[20px]">description</span>Resume</a></div></div><div class="flex flex-col md:flex-row justify-between items-center gap-4 text-meta text-on-surface-variant"><p>Â© 2024 RAUL MAHYA KOMARAN. ARSITEK SISTEM UTAMA.</p><div class="flex gap-8"><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a><a class="hover:text-primary transition-colors" href="#">Kebijakan Cookie</a></div></div></div></footer></body></html>
+
+

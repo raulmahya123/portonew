@@ -1,0 +1,218 @@
+﻿<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#d5e3ff","on-background":"#1c1b1b","primary-fixed-dim":"#a7c8ff","surface-dim":"#dcd9d9","tertiary":"#3f4140","background":"#fcf9f8","on-secondary-container":"#335682","on-tertiary-fixed-variant":"#454746","on-primary":"#ffffff","secondary":"#3e608c","on-tertiary":"#ffffff","secondary-container":"#aacbfe","tertiary-fixed":"#e2e3e1","tertiary-container":"#575857","on-error-container":"#93000a","primary-container":"#0058a6","on-secondary-fixed":"#001c39","outline":"#727782","inverse-surface":"#313030","on-tertiary-fixed":"#1a1c1b","inverse-on-surface":"#f3f0ef","on-error":"#ffffff","surface-container-high":"#ebe7e7","on-primary-fixed":"#001c3b","tertiary-fixed-dim":"#c6c7c5","on-tertiary-container":"#cececd","secondary-fixed":"#d4e3ff","inverse-primary":"#a7c8ff","error":"#ba1a1a","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","surface":"#fcf9f8","surface-tint":"#135fad","error-container":"#ffdad6","on-primary-fixed-variant":"#004787","on-surface-variant":"#424751","on-secondary-fixed-variant":"#244873","primary":"#00417d","surface-container-low":"#f6f3f2","surface-bright":"#fcf9f8","surface-variant":"#e5e2e1","on-surface":"#1c1b1b","on-primary-container":"#b4d0ff","surface-container-highest":"#e5e2e1","outline-variant":"#c2c6d3","secondary-fixed-dim":"#a7c8fb","surface-container":"#f0edec"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"20px","element-gap":"24px","section-padding":"120px","gutter":"32px","container-max":"1440px"},"fontFamily":{"headline-md":["Poppins"],"display-xl-mobile":["Poppins"],"body-md":["Poppins"],"headline-lg":["Poppins"],"display-xl":["Poppins"],"body-lg":["Poppins"],"label-caps":["Poppins"],"headline-lg-mobile":["Poppins"],"meta":["Poppins"]},"fontSize":{"headline-md":["30px",{"lineHeight":"1.4","fontWeight":"600"}],"display-xl-mobile":["40px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"headline-lg":["48px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"600"}],"display-xl":["72px",{"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"700"}],"body-lg":["20px",{"lineHeight":"1.6","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"1.0","letterSpacing":"0.1em","fontWeight":"600"}],"headline-lg-mobile":["32px",{"lineHeight":"1.3","fontWeight":"600"}],"meta":["14px",{"lineHeight":"1.4","fontWeight":"500"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300"><div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-gutter flex items-center justify-between"><div class="flex items-center gap-2"><a href="index.html"><img src="logoraul.png" alt="Raul Mahya Logo" class="h-10 w-auto object-contain"></a></div><nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary font-bold">
+    <a class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="index.html">Beranda</a>
+    <div class="relative group">
+        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Tentang <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
+            <a href="about.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Profil</a>
+            <a href="education.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Pendidikan</a>
+            <a href="gallery.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Galeri</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Pengalaman <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
+            <a href="experience.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Lini Masa Karir</a>
+            <a href="projects.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Proyek Pilihan</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Kemampuan <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
+            <a href="technology.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Tumpukan Teknologi</a>
+            <a href="expertise.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Keahlian</a>
+        </div>
+    </div>
+</nav><div class="flex items-center gap-6"><a class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-lg text-meta font-bold hover:bg-on-primary-fixed-variant transition-all shadow-sm" href="#">Mari Bekerja Sama</a><button class="xl:hidden material-symbols-outlined text-on-surface">menu</button></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Interactive Background Element -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden mix-blend-multiply opacity-40">
+<svg class="absolute w-[800px] h-[800px] text-surface-container/50 -top-[200px] -right-[200px]" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="50"></circle>
+</svg>
+<svg class="absolute w-[600px] h-[600px] text-primary/5 -bottom-[100px] -left-[100px]" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="50"></circle>
+</svg>
+</div>
+<!-- Hero Section -->
+<section class="relative w-full pt-section-padding pb-element-gap px-margin-mobile lg:px-gutter max-w-container-max mx-auto z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-element-gap items-end mb-element-gap">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.15em] uppercase">Project Case Study</span>
+<h1 class="font-display-xl text-display-xl-mobile lg:text-display-xl text-on-surface">Mine-Pro: Mining Operational ERP</h1>
+<p class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface-variant max-w-3xl leading-tight">Enterprise Resource Planning for Open-Pit Mining Operations.</p>
+</div>
+<div class="lg:col-span-4 flex flex-col items-start lg:items-end gap-2 text-on-surface-variant font-meta text-meta uppercase tracking-wider">
+<span>Role: Lead System Architect</span>
+<span>&amp; Backend Engineer</span>
+</div>
+</div>
+<!-- Hero Image Placeholder -->
+<div class="w-full relative shadow-2xl overflow-hidden rounded-xl bg-surface-container-high aspect-video transform hover:scale-[1.01] transition-transform duration-700 ease-out group">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 to-transparent z-10"></div>
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" data-alt="A highly detailed, editorial-style engineering render of a heavy industrial mining dashboard interface displayed on a sleek monitor. The UI shows complex data visualizations, charts, and maps detailing open-pit mine operations, fleet coordination, and production metrics. The setting is a minimalist, modern engineering control room bathed in cool, technical lighting, with subtle hints of corporate blue and structural grays from the Mine-Pro color palette. Professional, high-contrast, technical aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHKb-HDZGWw_QsS_1R8koF54gLK10JVk_PxxZk1kcWhFMbWLn2h-ZD-9iZQT_bF7iqbNMT326Fi6k7mot1v2ZFJ_OfHznyRe7A_NAHk7a8GrUBWXGXLI0uZMVXFyuvqtt4R1TN1FUHA9XO_gMqOMRrfgMz8IRlyM7eguWL5rtbffDQvISBLIw3vxQPRaqUPoNeHBE8O67jApN2eTpbpdpCDqnYIl1MrUi-qj6FTSejh1naSEBKbPKz1w')"></div>
+<!-- Overlay accent -->
+<div class="absolute bottom-6 right-6 z-20 flex items-center gap-2 bg-surface/90 backdrop-blur-md px-4 py-2 rounded-lg text-on-surface font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span>Main Dashboard View</span>
+</div>
+</div>
+</section>
+<!-- Project Metadata Bar -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-8 mb-section-padding z-10 relative shadow-md">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-gutter grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-on-tertiary-container/70 tracking-wider">Year</span>
+<span class="font-body-lg text-body-lg text-on-tertiary font-medium">2025</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-on-tertiary-container/70 tracking-wider">Industry</span>
+<span class="font-body-lg text-body-lg text-on-tertiary font-medium">Mining &amp; Heavy Equipment</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-on-tertiary-container/70 tracking-wider">Tech Stack</span>
+<span class="font-body-lg text-body-lg text-on-tertiary font-medium leading-tight">Laravel, .NET, Python, Power BI, SQL Server</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-on-tertiary-container/70 tracking-wider">Status</span>
+<span class="font-body-lg text-body-lg text-on-tertiary font-medium">Private Enterprise System</span>
+</div>
+</div>
+</section>
+<!-- 01 / Overview -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile lg:px-gutter mb-section-padding relative z-10">
+<div class="flex items-start gap-4 mb-element-gap">
+<span class="font-display-xl text-[48px] leading-none text-outline-variant font-bold">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-2 uppercase tracking-wide">Overview</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-element-gap">
+<div class="lg:col-span-5 relative">
+<!-- Decorative structural element -->
+<div class="w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-transparent absolute left-0 top-0 hidden lg:block"></div>
+<p class="font-headline-md text-[24px] leading-relaxed text-on-surface font-light pl-0 lg:pl-8">
+          Mine-Pro is a comprehensive, end-to-end operational planning and execution platform designed specifically for the rigorous demands of modern open-pit mining.
+        </p>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-6 text-body-lg text-on-surface-variant">
+<p>
+          It serves as the central nervous system for site operations, seamlessly connecting field sensors, heavy machinery telemetry, and human reporting into a unified, actionable data ecosystem. 
+        </p>
+<p>
+          By bridging the gap between raw data extraction and high-level strategic planning, Mine-Pro ensures operational resilience, maximizes fleet utilization, and provides real-time visibility across all phases of the mining lifecycle.
+        </p>
+</div>
+</div>
+</section>
+<!-- 02 / Business Context & Problem -->
+<section class="w-full bg-surface-container py-section-padding mb-section-padding relative z-10">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-gutter">
+<div class="flex items-start gap-4 mb-12">
+<span class="font-display-xl text-[48px] leading-none text-outline font-bold">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-2 uppercase tracking-wide">Business Context &amp; Problem</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative rounded-xl overflow-hidden shadow-lg aspect-square lg:aspect-[4/3]">
+<div class="bg-cover bg-center w-full h-full mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" data-alt="A striking, editorial photograph of an expansive open-pit mine at dusk. Heavy haul trucks and excavators are visible in the distance, their headlights cutting through the dusty air. The scene conveys massive scale, industrial complexity, and the challenging environment of heavy equipment operations. Tonal palette leans towards deep earth tones, contrasting with bright technical highlights, reflecting the Mine-Pro corporate aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2UavqEy48Pym5SkDqs0T89r6BqV6_ZzXNNqb_hiH8imopiTO0Fw2VQxd5abWo1T9Tq185anarmc9_STMYApcxkjvTr-wnIueJVUC3XFAzgRyH7m2l_H4qbQGI4jckKCzSLC-tbTzMpBxiB8fT0fH8nGWY05XatbGVx1HcUTE1ebVl56W1J6XLgXMsxP6m8ojFHdTIj5_r3o1nwinm8KCApA5ZBwOo-84xdeORG8vadtl1SzTDGnKZPA')"></div>
+<!-- Data overlay mock -->
+<div class="absolute inset-0 bg-primary/10 mix-blend-color flex flex-col justify-end p-8 pointer-events-none">
+<div class="w-full h-1/3 bg-gradient-to-t from-inverse-surface/80 to-transparent absolute bottom-0 left-0"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-primary font-meta text-[12px] tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                  Inefficiency Detected
+                </div>
+<div class="h-1 w-full bg-surface-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-error w-3/4"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex flex-col gap-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Prior to Mine-Pro, operations suffered from severe data fragmentation. Critical information regarding fleet coordination, material movement, and maintenance schedules was siloed across legacy spreadsheets, disparate vendor software, and manual paper trails.
+          </p>
+<div class="flex flex-col gap-4">
+<!-- Problem Point 1 -->
+<div class="flex items-start gap-4 p-6 bg-surface rounded-lg shadow-sm group hover:bg-error-container hover:shadow-md transition-all duration-300">
+<span class="material-symbols-outlined text-error mt-1">warning</span>
+<div>
+<h4 class="font-headline-md text-[18px] text-on-surface mb-1">Fragmented Telemetry</h4>
+<p class="text-body-md text-on-surface-variant group-hover:text-on-error-container transition-colors">Inability to cross-reference machine health with production targets in real-time.</p>
+</div>
+</div>
+<!-- Problem Point 2 -->
+<div class="flex items-start gap-4 p-6 bg-surface rounded-lg shadow-sm group hover:bg-error-container hover:shadow-md transition-all duration-300">
+<span class="material-symbols-outlined text-error mt-1">schedule</span>
+<div>
+<h4 class="font-headline-md text-[18px] text-on-surface mb-1">Delayed Decision Making</h4>
+<p class="text-body-md text-on-surface-variant group-hover:text-on-error-container transition-colors">Lagging indicators resulted in reactive maintenance rather than predictive planning.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 03 / The Solution & 04 / Core Modules -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile lg:px-gutter mb-section-padding relative z-10">
+<div class="flex items-start gap-4 mb-16">
+<span class="font-display-xl text-[48px] leading-none text-outline-variant font-bold">03</span>
+<div class="flex flex-col gap-4 mt-2">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wide">The Solution Architecture</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          A modular, scalable ERP architecture engineered to centralize data ingestion from disparate sources, providing a single source of truth for production, maintenance, and logistics.
+        </p>
+</div>
+</div>
+<!-- Bento Grid for Modules -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Module: Production (Large span) -->
+<a class="group block md:col-span-2 lg:col-span-2 bg-surface-container-low rounded-xl p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px] flex flex-col justify-end" href="#">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500" style="background-image: radial-gradient(circle at 80% 20%, var(--tw-colors-primary) 0%, transparent 50%);"></div>
+<!-- Abstract Chart SVG -->
+<svg class="absolute top-8 right-8 w-32 h-32 text-primary/20 group-hover:text-primary/40 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 100 100">
+<path d="M10,90 L30,60 L50,70 L70,30 L90,40" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="90" cy="40" fill="currentColor" r="3"></circle>
+</svg>
+<div class="relative z-10">
+<span class="font-label-caps text-[10px] tracking-widest text-primary mb-2 block uppercase">Core Module</span>
+<h3 class="font-headline-lg text-[32px] text-on-surface mb-2 group-hover:text-primary transition-colors">Production</h3>
+<p class="font-body-md text-on-surface-variant max-w-md line-clamp-2">Complete reconciliation between planned extraction targets and actual physical data, enabling precise yield analysis.</p>
+</div>
+</a>
+<!-- Module: Plant -->
+<a class="group block bg-surface-container-low rounded-xl p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px] flex flex-col justify-end" href="#">
+<span class="material-symbols-outlined absolute top-8 right-8 text-[48px] text-surface-variant group-hover:text-secondary transition-colors duration-500">engineering</span>
+<div class="relative z-10">
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2 group-hover:text-secondary transition-colors">Plant</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Heavy equipment maintenance scheduling, predictive failure modeling, and fleet availability optimization.</p>
+</div>
+</a>
+<!-- Module: SCM -->
+<a class="group block bg-surface-container-low rounded-xl p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px] flex flex-col justify-end" href="#">
+<span class="material-symbols-outlined absolute top-8 right-8 text-[48px] text-surface-variant group-hover:text-tertiary transition-colors duration-500">inventory_2</span>
+<div class="relative z-10">
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2 group-hover:text-tertiary transition-colors">SCM</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Integrated supply chain management tracking spare parts, consumables, and material logistics across the operation.</p>
+</div>
+</a>
+<!-- Module: HSE -->
+<a class="group block bg-surface-container-low rounded-xl p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px] flex flex-col justify-end" href="#">
+<span class="material-symbols-outlined absolute top-8 right-8 text-[48px] text-surface-variant group-hover:text-error transition-colors duration-500">health_and_safety</span>
+<div class="relative z-10">
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2 group-hover:text-error transition-colors">HSE</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Strict Health, Safety &amp; Environment monitoring, incident reporting, and compliance auditing tools.</p>
+</div>
+</a>
+<!-- Module: Fuel -->
+<a class="group block bg-surface-container-low rounded-xl p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px] flex flex-col justify-end" href="#">
+<span class="material-symbols-outlined absolute top-8 right-8 text-[48px] text-surface-variant group-hover:text-primary transition-colors duration-500">local_gas_station</span>
+<div class="relative z-10">
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2 group-hover:text-primary transition-colors">Fuel</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Granular distribution and consumption tracking to minimize shrinkage and optimize energy burn rates.</p>
+</div>
+</a>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container border-t border-outline-variant/30 py-section-padding"><div class="max-w-container-max mx-auto px-margin-mobile lg:px-gutter"><div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-outline-variant/30 pb-element-gap mb-element-gap"><div class="max-w-md"><h3 class="font-headline-md text-headline-md text-on-surface mb-2">Raul Mahya Komaran</h3><p class="text-body-md text-on-surface-variant italic">Membangun Sistem yang Menyelesaikan Masalah Bisnis Nyata</p></div><div class="flex gap-6"><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-meta" href="#"><span class="material-symbols-outlined text-[20px]">link</span>LinkedIn</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-meta" href="#"><span class="material-symbols-outlined text-[20px]">code</span>GitHub</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 text-meta" href="#"><span class="material-symbols-outlined text-[20px]">description</span>Resume</a></div></div><div class="flex flex-col md:flex-row justify-between items-center gap-4 text-meta text-on-surface-variant"><p>Â© 2024 RAUL MAHYA KOMARAN. ARSITEK SISTEM UTAMA.</p><div class="flex gap-8"><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a><a class="hover:text-primary transition-colors" href="#">Kebijakan Cookie</a></div></div></div></footer></body></html>
+
+
