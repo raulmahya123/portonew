@@ -16,13 +16,7 @@
             <a href="projects.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Proyek Pilihan</a>
         </div>
     </div>
-    <div class="relative group">
-        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Kemampuan <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
-        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
-            <a href="technology.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Tumpukan Teknologi</a>
-            <a href="expertise.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Keahlian</a>
-        </div>
-    </div>
+    <a class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors" data-path="technology" href="technology.html">Kemampuan</a>
 </nav><div class="flex items-center gap-6"><div class="hidden md:flex items-center gap-4 text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">link</span></a><a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">code</span></a></div><a class="px-6 py-3 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest" data-path="contact" href="contact.html">Mari Bekerja Sama</a></div></div></header><main class="relative pt-20 w-full min-h-screen"><div class="flex flex-col w-full">
 <!-- HERO SECTION -->
 <section class="relative w-full pt-20 pb-32 overflow-hidden bg-surface-container-low">
@@ -81,200 +75,31 @@
 </div>
 </section>
 
-<!-- CAREER JOURNEY TIMELINE -->
+<!-- CAREER JOURNEY LINK -->
 <section class="w-full py-section-padding bg-surface">
 <div class="max-w-container-max mx-auto px-gutter">
-<div class="mb-16">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-4">02 / Riwayat</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Perjalanan Karier</h2>
-</div>
-
-<div class="relative pl-8 md:pl-0">
-    <!-- Vertical Line -->
-    <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-outline-variant/30 transform md:-translate-x-1/2"></div>
-    
-    <div class="flex flex-col gap-12 relative z-10">
+    <div class="bg-surface-container-low rounded-3xl p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 border border-outline-variant/20 shadow-sm relative overflow-hidden">
+        <div class="absolute -right-32 -top-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-32 -bottom-32 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
         
-        <!-- August 2025 - Present -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <span class="font-meta text-primary font-bold">Aug 2025 – Saat Ini</span>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-primary ring-4 ring-surface transform -translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-            <div class="w-full md:w-1/2 pl-12">
-                <div class="md:hidden mb-2 font-meta text-primary font-bold">Aug 2025 – Saat Ini</div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">IT Specialist</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">Andalan Group (PT Andalan Artha Primanusa / PT Andalan Bumi Nusantara)</h4>
-            </div>
-        </div>
-
-        <!-- June 2026 - Present -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Technology / Development Leadership</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">Nexora</h4>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:text-left">
-                <div class="md:hidden mb-2 font-meta text-primary font-bold">Jun 2026 – Saat Ini</div>
-                <div class="hidden md:block font-meta text-primary font-bold pl-12">Jun 2026 – Saat Ini</div>
-                <div class="md:hidden">
-                    <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Technology / Development Leadership</h3>
-                    <h4 class="font-body-md text-on-surface-variant font-medium">Nexora</h4>
-                </div>
-            </div>
+        <div class="relative z-10 max-w-2xl">
+            <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-4">02 / Riwayat</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Perjalanan Karier Profesional</h2>
+            <p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                Untuk menghindari duplikasi informasi, detail lengkap mengenai riwayat perjalanan karier saya (termasuk deskripsi pekerjaan, teknologi yang digunakan, dan studi kasus) telah dirangkum dalam halaman khusus Pengalaman.
+            </p>
+            <a href="experience.html" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary rounded-xl font-meta font-bold hover:bg-on-primary-fixed-variant hover:scale-105 transition-all shadow-md group">
+                Lihat Detail Pengalaman
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
         </div>
         
-        <!-- June 2026 - Present 2 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <span class="font-meta text-primary font-bold">Jun 2026 – Saat Ini</span>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12">
-                <div class="md:hidden mb-2 font-meta text-primary font-bold">Jun 2026 – Saat Ini</div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Project / Development Leadership</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">PT Romulus Teknologi Nusantara / Nakala Digital</h4>
+        <div class="relative z-10 hidden lg:block">
+            <div class="w-48 h-48 rounded-full bg-surface-container-highest flex items-center justify-center border-8 border-surface shadow-inner">
+                <span class="material-symbols-outlined text-[80px] text-primary/40">work_history</span>
             </div>
         </div>
-
-        <!-- May 2025 - Aug 2025 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Odoo Developer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">PT Wibicon Karya Muda</h4>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:text-left">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">May 2025 – Aug 2025</div>
-                <div class="hidden md:block font-meta text-on-surface-variant font-bold pl-12">May 2025 – Aug 2025</div>
-                <div class="md:hidden">
-                    <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Odoo Developer</h3>
-                    <h4 class="font-body-md text-on-surface-variant font-medium">PT Wibicon Karya Muda</h4>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dec 2024 - Jul 2025 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <span class="font-meta text-on-surface-variant font-bold">Dec 2024 – Jul 2025</span>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Dec 2024 – Jul 2025</div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Software Engineer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">Trackindo / Cipta Kridatama</h4>
-            </div>
-        </div>
-        
-        <!-- Jul 2024 - Dec 2024 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Full-Stack Developer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">PT Winnicode Garuda</h4>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:text-left">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Jul 2024 – Dec 2024</div>
-                <div class="hidden md:block font-meta text-on-surface-variant font-bold pl-12">Jul 2024 – Dec 2024</div>
-                <div class="md:hidden">
-                    <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Full-Stack Developer</h3>
-                    <h4 class="font-body-md text-on-surface-variant font-medium">PT Winnicode Garuda</h4>
-                </div>
-            </div>
-        </div>
-
-        <!-- Jun 2024 - Dec 2024 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <span class="font-meta text-on-surface-variant font-bold">Jun 2024 – Dec 2024</span>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Jun 2024 – Dec 2024</div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Project Manager & R&D Specialist</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">PT Asia Sistem Indonesia</h4>
-            </div>
-        </div>
-
-        <!-- Mar 2023 - Feb 2024 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Backend Developer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">PT Motiolabs Digital Indonesia (Telkom Corpu)</h4>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:text-left">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Mar 2023 – Feb 2024</div>
-                <div class="hidden md:block font-meta text-on-surface-variant font-bold pl-12">Mar 2023 – Feb 2024</div>
-                <div class="md:hidden">
-                    <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Backend Developer</h3>
-                    <h4 class="font-body-md text-on-surface-variant font-medium">PT Motiolabs Digital Indonesia</h4>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Feb 2023 - Mar 2024 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <span class="font-meta text-on-surface-variant font-bold">Feb 2023 – Mar 2024</span>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Feb 2023 – Mar 2024</div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Backend Developer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">HIGE Studio / Ardan Studio (Freelance)</h4>
-            </div>
-        </div>
-
-        <!-- Sep 2022 - Dec 2022 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Backend Developer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">Fancypedia (Freelance)</h4>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:text-left">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Sep 2022 – Dec 2022</div>
-                <div class="hidden md:block font-meta text-on-surface-variant font-bold pl-12">Sep 2022 – Dec 2022</div>
-                <div class="md:hidden">
-                    <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Backend Developer</h3>
-                    <h4 class="font-body-md text-on-surface-variant font-medium">Fancypedia (Freelance)</h4>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Aug 2022 - Jan 2023 -->
-        <div class="flex flex-col md:flex-row items-center w-full group">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <span class="font-meta text-on-surface-variant font-bold">Aug 2022 – Jan 2023</span>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-surface transform -translate-x-1/2 group-hover:bg-primary transition-colors"></div>
-            <div class="w-full md:w-1/2 pl-12">
-                <div class="md:hidden mb-2 font-meta text-on-surface-variant font-bold">Aug 2022 – Jan 2023</div>
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1">Full-Stack Developer</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium">Geological Museum Bandung</h4>
-            </div>
-        </div>
-        
-        <!-- Internship / Early -->
-        <div class="flex flex-col md:flex-row items-center w-full group mt-8">
-            <div class="hidden md:flex w-1/2 justify-end pr-12 text-right">
-                <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1 text-on-surface-variant">Internship / Academic Industry Experience</h3>
-                <h4 class="font-body-md text-on-surface-variant font-medium italic">Berbagai pengalaman praktis industri</h4>
-            </div>
-            <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full border-2 border-surface-variant ring-4 ring-surface transform -translate-x-1/2"></div>
-            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:text-left">
-                <div class="md:hidden">
-                    <h3 class="font-headline-md text-[20px] font-bold text-on-surface mb-1 text-on-surface-variant">Internship / Academic Industry Experience</h3>
-                    <h4 class="font-body-md text-on-surface-variant font-medium italic">Berbagai pengalaman praktis industri</h4>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
 </div>
 </section>
 

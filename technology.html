@@ -16,18 +16,112 @@
             <a href="projects.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Proyek Pilihan</a>
         </div>
     </div>
-    <div class="relative group">
-        <button class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">Kemampuan <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
-        <div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-2 border border-outline-variant/20 z-50">
-            <a href="technology.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Tumpukan Teknologi</a>
-            <a href="expertise.html" class="px-4 py-2 hover:bg-surface-container rounded text-body-md text-on-surface hover:text-primary transition-colors">Keahlian</a>
+    <a class="font-meta text-meta text-on-surface-variant hover:text-on-surface transition-colors" data-path="technology" href="technology.html">Kemampuan</a>
+<main class="w-full pt-20 bg-surface min-h-screen">
+    <!-- EXPERTISE SECTION -->
+    <div class="max-w-container-max mx-auto px-gutter py-section-padding border-b border-outline-variant/20">
+        <div class="mb-12">
+            <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-4">Spesialisasi</span>
+            <h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface uppercase leading-tight mb-6">Keahlian Domain</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                Kompetensi inti yang berfokus pada penyelesaian masalah bisnis kompleks melalui arsitektur perangkat lunak yang terukur dan implementasi teknologi terkini.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-[2rem] border border-outline-variant/30 hover:border-primary/50 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center mb-8 relative z-10">
+                    <span class="material-symbols-outlined text-on-primary-container text-[32px]">lan</span>
+                </div>
+                
+                <h3 class="font-headline-lg text-[28px] text-on-surface mb-4 relative z-10">Enterprise Systems & ERP</h3>
+                <p class="font-body-md text-on-surface-variant mb-8 relative z-10">
+                    Perancangan dan implementasi sistem berskala besar yang mengintegrasikan berbagai proses bisnis inti. Berpengalaman dalam memodernisasi infrastruktur lama menjadi solusi berbasis cloud yang gesit dan tangguh.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 relative z-10">
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Arsitektur Microservices</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Integrasi API</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Optimasi Kinerja</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Keamanan Sistem</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-[2rem] border border-outline-variant/30 hover:border-secondary/50 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center mb-8 relative z-10">
+                    <span class="material-symbols-outlined text-on-secondary-container text-[32px]">memory</span>
+                </div>
+                
+                <h3 class="font-headline-lg text-[28px] text-on-surface mb-4 relative z-10">AI & Data Engineering</h3>
+                <p class="font-body-md text-on-surface-variant mb-8 relative z-10">
+                    Membangun alur data (data pipelines) yang andal untuk memproses dan menganalisis kumpulan data besar. Mengintegrasikan model kecerdasan buatan untuk mengotomatiskan keputusan bisnis dan memberikan wawasan prediktif.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 relative z-10">
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Data Warehousing</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Machine Learning Models</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">ETL Pipelines</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Data Visualization</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-[2rem] border border-outline-variant/30 hover:border-primary/50 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center mb-8 relative z-10">
+                    <span class="material-symbols-outlined text-on-primary-container text-[32px]">architecture</span>
+                </div>
+                
+                <h3 class="font-headline-lg text-[28px] text-on-surface mb-4 relative z-10">Software Architecture</h3>
+                <p class="font-body-md text-on-surface-variant mb-8 relative z-10">
+                    Merancang fondasi perangkat lunak yang kokoh dengan mempertimbangkan skalabilitas, pemeliharaan, dan ketersediaan tinggi. Memilih tumpukan teknologi yang tepat sesuai dengan kebutuhan bisnis jangka panjang.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 relative z-10">
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">System Design</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Cloud Infrastructure</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">DevOps CI/CD</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Agile Methodologies</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-surface-container-lowest p-8 md:p-10 rounded-[2rem] border border-outline-variant/30 hover:border-secondary/50 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center mb-8 relative z-10">
+                    <span class="material-symbols-outlined text-on-secondary-container text-[32px]">groups</span>
+                </div>
+                
+                <h3 class="font-headline-lg text-[28px] text-on-surface mb-4 relative z-10">Project & Development Lead</h3>
+                <p class="font-body-md text-on-surface-variant mb-8 relative z-10">
+                    Memimpin tim lintas fungsional untuk mengirimkan produk perangkat lunak berkualitas tinggi secara tepat waktu. Menjembatani kesenjangan komunikasi antara pemangku kepentingan bisnis dan tim pengembangan teknis.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 relative z-10">
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Technical Leadership</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Sprint Planning</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Code Review</span>
+                    <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-meta text-[13px]">Mentorship</span>
+                </div>
+            </div>
+            
         </div>
     </div>
-</nav><div class="flex items-center gap-6"><div class="hidden md:flex items-center gap-4 text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">link</span></a><a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">code</span></a></div><a class="px-6 py-3 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest" data-path="contact" href="contact.html">Mari Bekerja Sama</a></div></div></header><main class="w-full pt-20 bg-surface min-h-screen">
+
+    <!-- TECHNOLOGY SECTION -->
   <div class="max-w-container-max mx-auto px-gutter py-section-padding">
     <div class="mb-12">
       <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-4">Tumpukan Teknologi</span>
-      <h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface uppercase leading-tight mb-6">Alat &amp; Kerangka Kerja</h1>
+      <h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface uppercase leading-tight mb-6">Alat &amp; Kerangka Kerja</h2>
       <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Daftar komprehensif teknologi, bahasa pemrograman, dan alat yang saya gunakan untuk membangun sistem skala perusahaan, mulai dari arsitektur backend hingga pipeline AI.</p>
     </div>
     
