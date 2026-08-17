@@ -21,7 +21,6 @@
 <main class="w-full pt-20 bg-surface min-h-screen">
     <!-- Hero Section -->
     <section class="w-full relative px-margin-mobile lg:px-gutter pt-16 pb-20 bg-surface-container-low border-b border-outline-variant/20 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
         <div class="max-w-container-max mx-auto relative z-10">
             <div class="flex items-center gap-4 mb-6">
                 <a href="projects.html" class="flex items-center gap-2 font-meta text-[13px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">
@@ -32,11 +31,14 @@
             </div>
             
             <h1 class="font-display-xl-mobile md:text-[56px] text-on-surface uppercase leading-tight mb-6 font-bold max-w-4xl">
-                Seismic AI Pipeline
+                Seismic AI Data Pipeline
             </h1>
             <p class="font-headline-md text-[24px] text-on-surface-variant font-normal max-w-3xl leading-snug">
-                Infrastruktur pemrosesan data untuk model Machine Learning deteksi anomali kegempaan.
+                Sistem monitoring dan pipeline data OBS untuk membaca sensor, melihat waveform, melakukan spectral fitting PSD, dan menyiapkan dataset seismik untuk analisis Machine Learning.
             </p>
+            <figure class="mt-10 rounded-xl overflow-hidden border border-outline-variant/30 bg-surface shadow-sm max-w-5xl">
+                <img src="images/nexora/seismic-dashboard.png" alt="OBS Phase-1 dashboard for seismic sensor data monitoring" class="w-full h-full object-cover aspect-video">
+            </figure>
         </div>
     </section>
 
@@ -52,7 +54,7 @@
                         <span class="material-symbols-outlined text-primary text-[32px]">info</span> Ringkasan Proyek
                     </h2>
                     <p class="font-body-lg text-on-surface-variant leading-relaxed">
-                        Pengembangan jalur pipa data (data pipeline) dari hulu ke hilir untuk mempersiapkan, membersihkan, dan memberi makan data geospasial serta visual kepada model AI untuk deteksi anomali seismik.
+                        Pengembangan pipeline data seismik untuk memonitor data OBS, meninjau sinyal waveform, mengolah spectral fitting PSD, dan menyiapkan data yang lebih bersih untuk proses analisis serta model Machine Learning.
                     </p>
                 </div>
 
@@ -65,7 +67,7 @@
                             <span class="material-symbols-outlined text-error">warning</span> Tantangan Bisnis
                         </h3>
                         <p class="font-body-md text-on-surface-variant">
-                            Model AI (Computer Vision & NLP) membutuhkan data yang sangat bersih dan terstruktur, namun data mentah dari sensor sangat kotor, berisik, dan tersebar di berbagai format yang tidak standar.
+                            Data sensor seismik memiliki noise tinggi, variasi format, dan perlu dipantau secara konsisten. Tim membutuhkan cara cepat untuk melihat status sensor, preview waveform, dan kualitas data sebelum masuk proses analisis lanjutan.
                         </p>
                     </div>
                     <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 shadow-sm">
@@ -73,7 +75,7 @@
                             <span class="material-symbols-outlined text-primary">lightbulb</span> Solusi Arsitektur
                         </h3>
                         <p class="font-body-md text-on-surface-variant">
-                            Membangun script Python untuk ekstraksi fitur otomatis, normalisasi data sensor (ETL), dan integrasi pustaka pengolahan gambar (OpenCV) untuk mempercepat pelatihan model Machine Learning.
+                            Membangun dashboard monitoring dan pipeline Python untuk ekstraksi data sensor, cleansing, feature extraction, visualisasi waveform, spectral fitting PSD, serta export dataset untuk proses analitik dan Machine Learning.
                         </p>
                     </div>
                 </div>
@@ -82,7 +84,14 @@
                 <div>
                     <h2 class="font-headline-lg text-[24px] text-on-surface mb-6">Fitur & Implementasi Utama</h2>
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Automated Data Cleansing Pipeline</span></li><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Ekstraksi Fitur Visual (Computer Vision)</span></li><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Integrasi Model Machine Learning</span></li><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Manajemen Data Geospasial</span></li><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Dashboard Hasil Deteksi</span></li><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Optimasi Kinerja Pemrosesan Paralel</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Dashboard OBS Phase-1 untuk melihat data sensor, GPS latency, timestamp, dan status monitoring.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Preview waveform per channel agar sinyal bisa dicek langsung dari tabel monitoring.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Spectral fitting PSD untuk membandingkan data, model, dan noise pada domain frekuensi.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Pipeline cleansing dan normalisasi data sensor sebelum masuk proses analisis.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Filter data berdasarkan interval waktu, health, station, channel, dan status auto-refresh.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Export data untuk analitik lanjutan dan kebutuhan review engineering.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Persiapan dataset untuk model Machine Learning berbasis sinyal dan fitur seismik.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Kolaborasi jarak jauh dengan tim engineering untuk validasi hasil analisis dan iterasi pipeline.</span></li>
                     </ul>
                 </div>
                 
@@ -94,11 +103,19 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
         <div class="relative group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer aspect-video bg-surface-container-high border border-outline-variant/20">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gallery image 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            <img src="images/nexora/seismic-dashboard.png" alt="OBS dashboard with seismic sensor monitoring table" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
         </div>
     
         <div class="relative group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer aspect-video bg-surface-container-high border border-outline-variant/20">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gallery image 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            <img src="images/nexora/seismic-waveform-modal.png" alt="Waveform preview modal for seismic channel data" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+        </div>
+
+        <div class="relative group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer aspect-video bg-surface-container-high border border-outline-variant/20">
+            <img src="images/nexora/seismic-psd-analysis.png" alt="Spectral fitting PSD analysis chart" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+        </div>
+
+        <div class="relative group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer aspect-video bg-surface-container-high border border-outline-variant/20">
+            <img src="images/nexora/seismic-team-call.png" alt="Remote engineering team discussion for seismic pipeline project" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
         </div>
     
                     </div>
@@ -199,6 +216,5 @@
     </div>
   </div>
 </footer></body></html>
-
 
 

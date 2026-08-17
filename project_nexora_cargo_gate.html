@@ -31,10 +31,10 @@
       <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-center">
         <div>
           <h1 class="font-display-xl-mobile md:text-[56px] text-on-surface uppercase leading-tight mb-6 font-bold max-w-4xl">Cargo Gate Shipping Application</h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Aplikasi shipping cargo untuk mencatat pengiriman, memantau status, dan mengelola proses cargo gate secara digital.</p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Logistics Management System untuk mengelola job order, container, customs, surat jalan, armada, finance, AR/AP, laporan, dan workflow operasional cargo gate.</p>
         </div>
         <figure class="rounded-xl overflow-hidden border border-outline-variant/30 bg-surface shadow-lg aspect-video">
-          <img src="images/nexora/cargo-gate.png" alt="Cargo Gate Shipping Application screenshot" class="w-full h-full object-cover">
+          <img src="images/nexora/cargo-gate-login-live.png" alt="CargoGate live login page screenshot" class="w-full h-full object-cover">
         </figure>
       </div>
     </div>
@@ -45,38 +45,44 @@
       <div class="lg:col-span-8 flex flex-col gap-10">
         <section>
           <h2 class="font-headline-lg text-[32px] text-on-surface mb-5">Ringkasan Implementasi</h2>
-          <p class="font-body-lg text-on-surface-variant leading-relaxed">Aplikasi shipping cargo untuk mencatat pengiriman, memantau status, dan mengelola proses cargo gate secara digital. Project ini difokuskan untuk membuat proses lebih jelas, data lebih mudah dikelola, dan pengalaman pengguna tetap sederhana meskipun proses bisnisnya kompleks.</p>
+          <p class="font-body-lg text-on-surface-variant leading-relaxed">CargoGate dibangun sebagai sistem operasional logistik berbasis Laravel untuk menghubungkan data master, job order, armada, container, customs, surat jalan, tracking, biaya operasional, invoice, AR/AP, dan laporan. Halaman live yang bisa diakses publik adalah login dengan demo role Admin, Operasional, Finance, dan PPJK.</p>
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
             <h3 class="font-headline-md text-[20px] text-on-surface mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary">flag</span> Fokus Proyek</h3>
-            <p class="font-body-md text-on-surface-variant">Merapikan alur kerja, menyatukan data penting, dan menyediakan tampilan yang mudah dipakai oleh admin maupun pengguna operasional.</p>
+            <p class="font-body-md text-on-surface-variant">Menyatukan proses cargo dari master data sampai finance agar operasional, PPJK, dan finance bekerja dari data job order yang sama.</p>
           </div>
           <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
             <h3 class="font-headline-md text-[20px] text-on-surface mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary">trending_up</span> Dampak</h3>
-            <p class="font-body-md text-on-surface-variant">Proses shipping cargo lebih terpantau dan data pengiriman lebih mudah dicari.</p>
+            <p class="font-body-md text-on-surface-variant">Status job order, container, biaya armada, invoice, outstanding, dan profit dapat dipantau lebih rapi per customer, armada, maupun driver.</p>
           </div>
         </section>
 
         <section>
           <h2 class="font-headline-lg text-[28px] text-on-surface mb-6">Fitur Utama</h2>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Input data pengiriman</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Tracking status cargo</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Manajemen gate dan proses</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Riwayat shipment</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Dashboard ringkasan pengiriman</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Laporan operasional cargo</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Role login untuk Admin, Operasional, Finance, dan PPJK.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Master data customer, vendor, PPJK, shipping line, armada, driver, dan container.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Job order cargo dengan customer, armada, driver, container, shipping line, PPJK, vessel, voyage, dan status operasional.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Status job order dari draft, assigned, pickup, on delivery, gate in, customs, sailing, delivered, sampai closed.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Container tracking dengan seal number, berat muat, pickup, loading, gate in, gate out, delivery, foto container, dan catatan.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Customs/PPJK untuk dokumen pabean, bill of lading, manifest, invoice, bea masuk, PPN, PPh, dan denda.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Surat jalan dengan update status dan integrasi dummy invoice untuk demo flow.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">GPS/RFID event demo untuk pickup, gate in, gate out, dan delivery.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Armada management untuk budget, pengeluaran, izin, uang jalan, dan maintenance.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Approval pengeluaran armada bertingkat dari operasional ke finance.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Finance module untuk invoice, job costs, payment, profit analysis, export data, AP, dan AR.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Laporan aging, outstanding, reminder, laba rugi, neraca, cash flow, profit per customer, armada, dan driver.</span></li>
           </ul>
         </section>
 
         <section>
           <h2 class="font-headline-lg text-[28px] text-on-surface mb-6">Foto / Tampilan Proyek</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/cargo-gate.png" alt="Project screenshot" class="w-full h-full object-cover"></figure>
-                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/bisa-platform.png" alt="Project screenshot" class="w-full h-full object-cover"></figure>
-                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/ticketing-andalan.png" alt="Project screenshot" class="w-full h-full object-cover"></figure>
+                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/cargo-gate-login-live.png" alt="CargoGate live login page" class="w-full h-full object-cover"></figure>
+                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/cargo-gate.png" alt="Cargo Gate logistics application screen" class="w-full h-full object-cover"></figure>
+                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/cargo-gate-logo.png" alt="CargoGate product logo" class="w-full h-full object-contain p-8"></figure>
           </div>
         </section>
       </div>
@@ -88,9 +94,11 @@
             <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Laravel</span>
                             <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">MySQL</span>
-                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">REST API</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Blade</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Tailwind CSS</span>
                             <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Dashboard</span>
-                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Barcode/QR Flow</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Chart.js</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Finance Flow</span>
                             <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Responsive UI</span>
             </div>
           </div>
@@ -180,5 +188,4 @@
     </div>
   </div>
 </footer></body></html>
-
 

@@ -31,10 +31,10 @@
       <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-center">
         <div>
           <h1 class="font-display-xl-mobile md:text-[56px] text-on-surface uppercase leading-tight mb-6 font-bold max-w-4xl">Point of Sale Application</h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Aplikasi POS untuk transaksi kasir, produk, stok, pembayaran, diskon, pajak, dan laporan penjualan harian.</p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Retail Point of Sale berbasis Laravel untuk operasional toko: login user, checkout kasir, billing list, invoice PDF, customer facing display, purchase, stok, payment, dan kontrol akses admin.</p>
         </div>
         <figure class="rounded-xl overflow-hidden border border-outline-variant/30 bg-surface shadow-lg aspect-video">
-          <img src="images/nexora/POS.png" alt="Point of Sale Application screenshot" class="w-full h-full object-cover">
+          <img src="images/nexora/POS.png" alt="Point of Sale dashboard screenshot" class="w-full h-full object-cover">
         </figure>
       </div>
     </div>
@@ -45,38 +45,44 @@
       <div class="lg:col-span-8 flex flex-col gap-10">
         <section>
           <h2 class="font-headline-lg text-[32px] text-on-surface mb-5">Ringkasan Implementasi</h2>
-          <p class="font-body-lg text-on-surface-variant leading-relaxed">Aplikasi POS untuk transaksi kasir, produk, stok, pembayaran, diskon, pajak, dan laporan penjualan harian. Project ini difokuskan untuk membuat proses lebih jelas, data lebih mudah dikelola, dan pengalaman pengguna tetap sederhana meskipun proses bisnisnya kompleks.</p>
+          <p class="font-body-lg text-on-surface-variant leading-relaxed">Aplikasi POS ini dibangun dari codebase `nexorapos` untuk mengelola siklus retail dari login, dashboard, master data, pembelian barang, stock movement, transaksi kasir, pembayaran, invoice, sampai daily reconciliation. Fokusnya adalah membuat proses toko lebih rapi tanpa membuat kasir tersesat di alur yang terlalu berat.</p>
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
             <h3 class="font-headline-md text-[20px] text-on-surface mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary">flag</span> Fokus Proyek</h3>
-            <p class="font-body-md text-on-surface-variant">Merapikan alur kerja, menyatukan data penting, dan menyediakan tampilan yang mudah dipakai oleh admin maupun pengguna operasional.</p>
+            <p class="font-body-md text-on-surface-variant">Menyatukan proses sales, product, purchase, stock, customer, supplier, payment, dan role permission dalam satu admin panel retail.</p>
           </div>
           <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
             <h3 class="font-headline-md text-[20px] text-on-surface mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary">trending_up</span> Dampak</h3>
-            <p class="font-body-md text-on-surface-variant">Operasional penjualan toko lebih rapi dan data transaksi lebih mudah dianalisis.</p>
+            <p class="font-body-md text-on-surface-variant">Checkout membuat sale, sale items, invoice, payment record, dan pergerakan stok lebih mudah dilacak.</p>
           </div>
         </section>
 
         <section>
           <h2 class="font-headline-lg text-[28px] text-on-surface mb-6">Fitur Utama</h2>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Transaksi kasir cepat</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Manajemen produk dan stok</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Diskon dan pajak</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Metode pembayaran</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Cetak atau rekap struk</span></li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Laporan penjualan harian</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">POS Sell dengan product grid, kategori item, cart session, billing list, order type, dan tombol charge.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Checkout otomatis membuat sales, sale items, payment record, invoice, dan opsi download PDF.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Split payment, metode pembayaran, paid amount, change amount, save bill, dan print bill.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Customer Facing Display untuk menampilkan transaksi ke layar pelanggan.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Master produk, kategori, variant, pajak, diskon, import, export, recycle, dan restore produk.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Purchase dan purchase item untuk pembelian barang dari supplier.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Stock movement per store, product, variant, status void, dan minimum stock.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Dashboard admin dengan statistik user, store, category, product, supplier, customer, tax, purchase, sale, dan grafik penjualan.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Daily reconciliation untuk pencocokan pendapatan dan transaksi harian.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Role & permission untuk membatasi akses fitur seperti kasir, sales, product, stock, purchase, dan payments.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Company/license setting dengan payment due date, grace period, dan akses user per perusahaan.</span></li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span><span class="font-body-md text-on-surface-variant">Middleware auth, admin permission, dan XSS filtering untuk menjaga akses admin panel.</span></li>
           </ul>
         </section>
 
         <section>
           <h2 class="font-headline-lg text-[28px] text-on-surface mb-6">Foto / Tampilan Proyek</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/POS.png" alt="Project screenshot" class="w-full h-full object-cover"></figure>
-                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/moneyku.png" alt="Project screenshot" class="w-full h-full object-cover"></figure>
-                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/hitung-pajak.png" alt="Project screenshot" class="w-full h-full object-cover"></figure>
+                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/POS.png" alt="POS admin dashboard with sales report and statistics" class="w-full h-full object-cover"></figure>
+                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/pos-live-login.png" alt="Live POS login page screenshot" class="w-full h-full object-cover"></figure>
+                        <figure class="rounded-xl overflow-hidden border border-outline-variant/25 bg-surface-container-high aspect-video shadow-sm"><img src="images/nexora/pos-business-process.png" alt="Nexora POS business process diagram" class="w-full h-full object-cover"></figure>
           </div>
         </section>
       </div>
@@ -87,11 +93,14 @@
             <span class="font-label-caps text-[11px] uppercase tracking-widest text-on-surface-variant mb-3 block">Tech Stack</span>
             <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Laravel</span>
-                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">React</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Blade</span>
                             <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">MySQL</span>
-                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">REST API</span>
-                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Inventory</span>
-                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Receipt Flow</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Eloquent</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Tailwind CSS</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Alpine.js</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">Vite</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">PDF Invoice</span>
+                            <span class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-meta text-[13px] border border-outline-variant/30">RBAC</span>
             </div>
           </div>
           <div class="h-px bg-outline-variant/30"></div>
@@ -180,5 +189,4 @@
     </div>
   </div>
 </footer></body></html>
-
 

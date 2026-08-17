@@ -1,0 +1,352 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/RBACPage.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=758c0afe"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import { ShieldCheck, UsersRound } from "/node_modules/.vite/deps/lucide-react.js?v=758c0afe";
+import { PageHeader } from "/src/components/PageHeader.tsx";
+export function RBACPage({
+  user,
+  roles,
+  myPermissions
+}) {
+  const modules = Array.from(new Set(roles.flatMap((role) => role.permissions.map((permission) => permission.module)))).sort();
+  const actions = Array.from(new Set(roles.flatMap((role) => role.permissions.map((permission) => permission.action)))).sort();
+  if (user.role !== "Super Admin") {
+    return /* @__PURE__ */ jsxDEV(PageHeader, { title: "Access Denied", description: "Menu RBAC hanya tersedia untuk Super Admin." }, void 0, false, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+      lineNumber: 37,
+      columnNumber: 12
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDEV("section", { className: "rbac-page", children: [
+    /* @__PURE__ */ jsxDEV(
+      PageHeader,
+      {
+        title: "RBAC Management",
+        description: "Kontrol role, permission, scope akses, dan visibilitas menu frontend berdasarkan permission backend.",
+        meta: /* @__PURE__ */ jsxDEV("span", { className: "header-meta", children: "Super Admin Only" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 44,
+          columnNumber: 13
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 41,
+        columnNumber: 5
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV("section", { className: "rbac-summary", children: [
+      /* @__PURE__ */ jsxDEV("article", { children: [
+        /* @__PURE__ */ jsxDEV(UsersRound, { size: 20 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 48,
+          columnNumber: 16
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "Roles" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 48,
+          columnNumber: 40
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: roles.length }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 48,
+          columnNumber: 58
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 48,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("article", { children: [
+        /* @__PURE__ */ jsxDEV(ShieldCheck, { size: 20 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 49,
+          columnNumber: 16
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "Permission Catalog" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 49,
+          columnNumber: 41
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: [
+          modules.length,
+          " modules"
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 49,
+          columnNumber: 72
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 49,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("article", { children: [
+        /* @__PURE__ */ jsxDEV(ShieldCheck, { size: 20 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 50,
+          columnNumber: 16
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "Current User Grants" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 50,
+          columnNumber: 41
+        }, this),
+        /* @__PURE__ */ jsxDEV("strong", { children: myPermissions.length }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 50,
+          columnNumber: 73
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 50,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+      lineNumber: 47,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "rbac-grid", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "rbac-card", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "panel-head", children: [
+          /* @__PURE__ */ jsxDEV("h3", { children: "Role Access Detail" }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 55,
+            columnNumber: 37
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            roles.length,
+            " role"
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 55,
+            columnNumber: 64
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 55,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "rbac-role-list", children: roles.map((role) => /* @__PURE__ */ jsxDEV("article", { children: [
+          /* @__PURE__ */ jsxDEV("header", { children: [
+            /* @__PURE__ */ jsxDEV("strong", { children: role.role }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 59,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: [
+              role.permissions.length,
+              " permissions"
+            ] }, void 0, true, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 60,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 58,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: [
+            "Scopes: ",
+            role.scopes.join(", ")
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 62,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "permission-tags", children: [
+            role.permissions.slice(0, 12).map((permission) => /* @__PURE__ */ jsxDEV("span", { children: [
+              permission.module,
+              ":",
+              permission.action
+            ] }, `${role.role}-${permission.module}-${permission.action}`, true, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 64,
+              columnNumber: 66
+            }, this)),
+            role.permissions.length > 12 && /* @__PURE__ */ jsxDEV("span", { children: [
+              "+",
+              role.permissions.length - 12,
+              " more"
+            ] }, void 0, true, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 65,
+              columnNumber: 48
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 63,
+            columnNumber: 13
+          }, this)
+        ] }, role.role, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 57,
+          columnNumber: 32
+        }, this)) }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 56,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 54,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "rbac-card", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "panel-head", children: [
+          /* @__PURE__ */ jsxDEV("h3", { children: "Permission Matrix" }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 72,
+            columnNumber: 37
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            modules.length,
+            " modules"
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 72,
+            columnNumber: 63
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 72,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "table-wrap", children: /* @__PURE__ */ jsxDEV("table", { children: [
+          /* @__PURE__ */ jsxDEV("thead", { children: /* @__PURE__ */ jsxDEV("tr", { children: [
+            /* @__PURE__ */ jsxDEV("th", { children: "Module" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 75,
+              columnNumber: 24
+            }, this),
+            actions.map((action) => /* @__PURE__ */ jsxDEV("th", { children: action }, action, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 75,
+              columnNumber: 64
+            }, this))
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 75,
+            columnNumber: 20
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 75,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("tbody", { children: modules.map((module) => /* @__PURE__ */ jsxDEV("tr", { children: [
+            /* @__PURE__ */ jsxDEV("td", { children: module }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 78,
+              columnNumber: 17
+            }, this),
+            actions.map((action) => /* @__PURE__ */ jsxDEV("td", { children: roles.some((role) => role.permissions.some((permission) => permission.module === module && permission.action === action)) ? "Available" : "-" }, `${module}-${action}`, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+              lineNumber: 79,
+              columnNumber: 42
+            }, this))
+          ] }, module, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 77,
+            columnNumber: 40
+          }, this)) }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+            lineNumber: 76,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 74,
+          columnNumber: 11
+        }, this) }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 73,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 71,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+      lineNumber: 53,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "rbac-card", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "panel-head", children: [
+        /* @__PURE__ */ jsxDEV("h3", { children: "Frontend Menu Rule" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 88,
+          columnNumber: 35
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "Permission based" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 88,
+          columnNumber: 62
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 88,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "rbac-note", children: [
+        "Sidebar hanya menampilkan menu ketika user punya minimal satu permission yang dibutuhkan menu tersebut. Menu RBAC Management, Role and Permission, dan System Settings hanya tampil untuk permission ",
+        /* @__PURE__ */ jsxDEV("strong", { children: "user_management:manage" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+          lineNumber: 89,
+          columnNumber: 229
+        }, this),
+        ", sehingga secara default hanya Super Admin yang melihatnya."
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+        lineNumber: 89,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+      lineNumber: 87,
+      columnNumber: 5
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx",
+    lineNumber: 40,
+    columnNumber: 10
+  }, this);
+}
+_c = RBACPage;
+var _c;
+$RefreshReg$(_c, "RBACPage");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/raulm/Downloads/financeaap/frontend/src/pages/RBACPage.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUE7QUFBQTtBQUFBO0FBQUEsZUFVQTtBQUFBLFdBWkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQWFBO0FBQUEsU0EvQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQWdDQTtBQUFBLElBRUEsdUJBQUMsYUFBUSxXQUFVLGFBQ2pCO0FBQUEsNkJBQUMsU0FBSSxXQUFVLGNBQWE7QUFBQSwrQkFBQyxRQUFHLGtDQUFKO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBc0I7QUFBQSxRQUFLLHVCQUFDLFVBQUssZ0NBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFzQjtBQUFBLFdBQTdFO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBb0Y7QUFBQSxNQUNwRix1QkFBQyxPQUFFLFdBQVUsYUFBWTtBQUFBO0FBQUEsUUFBcU0sdUJBQUMsWUFBTyxzQ0FBUjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQThCO0FBQUEsUUFBUztBQUFBLFdBQXJRO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBaVU7QUFBQSxTQUZuVTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBR0E7QUFBQSxPQWxESztBQUFBO0FBQUE7QUFBQTtBQUFBLFNBbURQO0FBQ0Y7QUFBQ1MsS0FwRWV0QjtBQUFRLElBQUFzQjtBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJTaGllbGRDaGVjayIsIlVzZXJzUm91bmQiLCJQYWdlSGVhZGVyIiwiUkJBQ1BhZ2UiLCJ1c2VyIiwicm9sZXMiLCJteVBlcm1pc3Npb25zIiwibW9kdWxlcyIsIkFycmF5IiwiZnJvbSIsIlNldCIsImZsYXRNYXAiLCJyb2xlIiwicGVybWlzc2lvbnMiLCJtYXAiLCJwZXJtaXNzaW9uIiwibW9kdWxlIiwic29ydCIsImFjdGlvbnMiLCJhY3Rpb24iLCJsZW5ndGgiLCJzY29wZXMiLCJqb2luIiwic2xpY2UiLCJzb21lIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiUkJBQ1BhZ2UudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNoaWVsZENoZWNrLCBVc2Vyc1JvdW5kIH0gZnJvbSBcImx1Y2lkZS1yZWFjdFwiO1xuaW1wb3J0IHsgUGFnZUhlYWRlciB9IGZyb20gXCIuLi9jb21wb25lbnRzL1BhZ2VIZWFkZXJcIjtcbmltcG9ydCB0eXBlIHsgUGVybWlzc2lvbiwgUm9sZUFjY2VzcywgVXNlciB9IGZyb20gXCIuLi9saWIvYXBpXCI7XG5cbmV4cG9ydCBmdW5jdGlvbiBSQkFDUGFnZSh7XG4gIHVzZXIsXG4gIHJvbGVzLFxuICBteVBlcm1pc3Npb25zXG59OiB7XG4gIHVzZXI6IFVzZXI7XG4gIHJvbGVzOiBSb2xlQWNjZXNzW107XG4gIG15UGVybWlzc2lvbnM6IFBlcm1pc3Npb25bXTtcbn0pIHtcbiAgY29uc3QgbW9kdWxlcyA9IEFycmF5LmZyb20obmV3IFNldChyb2xlcy5mbGF0TWFwKChyb2xlKSA9PiByb2xlLnBlcm1pc3Npb25zLm1hcCgocGVybWlzc2lvbikgPT4gcGVybWlzc2lvbi5tb2R1bGUpKSkpLnNvcnQoKTtcbiAgY29uc3QgYWN0aW9ucyA9IEFycmF5LmZyb20obmV3IFNldChyb2xlcy5mbGF0TWFwKChyb2xlKSA9PiByb2xlLnBlcm1pc3Npb25zLm1hcCgocGVybWlzc2lvbikgPT4gcGVybWlzc2lvbi5hY3Rpb24pKSkpLnNvcnQoKTtcblxuICBpZiAodXNlci5yb2xlICE9PSBcIlN1cGVyIEFkbWluXCIpIHtcbiAgICByZXR1cm4gPFBhZ2VIZWFkZXIgdGl0bGU9XCJBY2Nlc3MgRGVuaWVkXCIgZGVzY3JpcHRpb249XCJNZW51IFJCQUMgaGFueWEgdGVyc2VkaWEgdW50dWsgU3VwZXIgQWRtaW4uXCIgLz47XG4gIH1cblxuICByZXR1cm4gPHNlY3Rpb24gY2xhc3NOYW1lPVwicmJhYy1wYWdlXCI+XG4gICAgPFBhZ2VIZWFkZXJcbiAgICAgIHRpdGxlPVwiUkJBQyBNYW5hZ2VtZW50XCJcbiAgICAgIGRlc2NyaXB0aW9uPVwiS29udHJvbCByb2xlLCBwZXJtaXNzaW9uLCBzY29wZSBha3NlcywgZGFuIHZpc2liaWxpdGFzIG1lbnUgZnJvbnRlbmQgYmVyZGFzYXJrYW4gcGVybWlzc2lvbiBiYWNrZW5kLlwiXG4gICAgICBtZXRhPXs8c3BhbiBjbGFzc05hbWU9XCJoZWFkZXItbWV0YVwiPlN1cGVyIEFkbWluIE9ubHk8L3NwYW4+fVxuICAgIC8+XG5cbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJyYmFjLXN1bW1hcnlcIj5cbiAgICAgIDxhcnRpY2xlPjxVc2Vyc1JvdW5kIHNpemU9ezIwfSAvPjxzcGFuPlJvbGVzPC9zcGFuPjxzdHJvbmc+e3JvbGVzLmxlbmd0aH08L3N0cm9uZz48L2FydGljbGU+XG4gICAgICA8YXJ0aWNsZT48U2hpZWxkQ2hlY2sgc2l6ZT17MjB9IC8+PHNwYW4+UGVybWlzc2lvbiBDYXRhbG9nPC9zcGFuPjxzdHJvbmc+e21vZHVsZXMubGVuZ3RofSBtb2R1bGVzPC9zdHJvbmc+PC9hcnRpY2xlPlxuICAgICAgPGFydGljbGU+PFNoaWVsZENoZWNrIHNpemU9ezIwfSAvPjxzcGFuPkN1cnJlbnQgVXNlciBHcmFudHM8L3NwYW4+PHN0cm9uZz57bXlQZXJtaXNzaW9ucy5sZW5ndGh9PC9zdHJvbmc+PC9hcnRpY2xlPlxuICAgIDwvc2VjdGlvbj5cblxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cInJiYWMtZ3JpZFwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJyYmFjLWNhcmRcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwYW5lbC1oZWFkXCI+PGgzPlJvbGUgQWNjZXNzIERldGFpbDwvaDM+PHNwYW4+e3JvbGVzLmxlbmd0aH0gcm9sZTwvc3Bhbj48L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyYmFjLXJvbGUtbGlzdFwiPlxuICAgICAgICAgIHtyb2xlcy5tYXAoKHJvbGUpID0+IDxhcnRpY2xlIGtleT17cm9sZS5yb2xlfT5cbiAgICAgICAgICAgIDxoZWFkZXI+XG4gICAgICAgICAgICAgIDxzdHJvbmc+e3JvbGUucm9sZX08L3N0cm9uZz5cbiAgICAgICAgICAgICAgPHNwYW4+e3JvbGUucGVybWlzc2lvbnMubGVuZ3RofSBwZXJtaXNzaW9uczwvc3Bhbj5cbiAgICAgICAgICAgIDwvaGVhZGVyPlxuICAgICAgICAgICAgPHA+U2NvcGVzOiB7cm9sZS5zY29wZXMuam9pbihcIiwgXCIpfTwvcD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGVybWlzc2lvbi10YWdzXCI+XG4gICAgICAgICAgICAgIHtyb2xlLnBlcm1pc3Npb25zLnNsaWNlKDAsIDEyKS5tYXAoKHBlcm1pc3Npb24pID0+IDxzcGFuIGtleT17YCR7cm9sZS5yb2xlfS0ke3Blcm1pc3Npb24ubW9kdWxlfS0ke3Blcm1pc3Npb24uYWN0aW9ufWB9PntwZXJtaXNzaW9uLm1vZHVsZX06e3Blcm1pc3Npb24uYWN0aW9ufTwvc3Bhbj4pfVxuICAgICAgICAgICAgICB7cm9sZS5wZXJtaXNzaW9ucy5sZW5ndGggPiAxMiAmJiA8c3Bhbj4re3JvbGUucGVybWlzc2lvbnMubGVuZ3RoIC0gMTJ9IG1vcmU8L3NwYW4+fVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9hcnRpY2xlPil9XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmJhYy1jYXJkXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGFuZWwtaGVhZFwiPjxoMz5QZXJtaXNzaW9uIE1hdHJpeDwvaDM+PHNwYW4+e21vZHVsZXMubGVuZ3RofSBtb2R1bGVzPC9zcGFuPjwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhYmxlLXdyYXBcIj5cbiAgICAgICAgICA8dGFibGU+XG4gICAgICAgICAgICA8dGhlYWQ+PHRyPjx0aD5Nb2R1bGU8L3RoPnthY3Rpb25zLm1hcCgoYWN0aW9uKSA9PiA8dGgga2V5PXthY3Rpb259PnthY3Rpb259PC90aD4pfTwvdHI+PC90aGVhZD5cbiAgICAgICAgICAgIDx0Ym9keT5cbiAgICAgICAgICAgICAge21vZHVsZXMubWFwKChtb2R1bGUpID0+IDx0ciBrZXk9e21vZHVsZX0+XG4gICAgICAgICAgICAgICAgPHRkPnttb2R1bGV9PC90ZD5cbiAgICAgICAgICAgICAgICB7YWN0aW9ucy5tYXAoKGFjdGlvbikgPT4gPHRkIGtleT17YCR7bW9kdWxlfS0ke2FjdGlvbn1gfT57cm9sZXMuc29tZSgocm9sZSkgPT4gcm9sZS5wZXJtaXNzaW9ucy5zb21lKChwZXJtaXNzaW9uKSA9PiBwZXJtaXNzaW9uLm1vZHVsZSA9PT0gbW9kdWxlICYmIHBlcm1pc3Npb24uYWN0aW9uID09PSBhY3Rpb24pKSA/IFwiQXZhaWxhYmxlXCIgOiBcIi1cIn08L3RkPil9XG4gICAgICAgICAgICAgIDwvdHI+KX1cbiAgICAgICAgICAgIDwvdGJvZHk+XG4gICAgICAgICAgPC90YWJsZT5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG5cbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJyYmFjLWNhcmRcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGFuZWwtaGVhZFwiPjxoMz5Gcm9udGVuZCBNZW51IFJ1bGU8L2gzPjxzcGFuPlBlcm1pc3Npb24gYmFzZWQ8L3NwYW4+PC9kaXY+XG4gICAgICA8cCBjbGFzc05hbWU9XCJyYmFjLW5vdGVcIj5TaWRlYmFyIGhhbnlhIG1lbmFtcGlsa2FuIG1lbnUga2V0aWthIHVzZXIgcHVueWEgbWluaW1hbCBzYXR1IHBlcm1pc3Npb24geWFuZyBkaWJ1dHVoa2FuIG1lbnUgdGVyc2VidXQuIE1lbnUgUkJBQyBNYW5hZ2VtZW50LCBSb2xlIGFuZCBQZXJtaXNzaW9uLCBkYW4gU3lzdGVtIFNldHRpbmdzIGhhbnlhIHRhbXBpbCB1bnR1ayBwZXJtaXNzaW9uIDxzdHJvbmc+dXNlcl9tYW5hZ2VtZW50Om1hbmFnZTwvc3Ryb25nPiwgc2VoaW5nZ2Egc2VjYXJhIGRlZmF1bHQgaGFueWEgU3VwZXIgQWRtaW4geWFuZyBtZWxpaGF0bnlhLjwvcD5cbiAgICA8L3NlY3Rpb24+XG4gIDwvc2VjdGlvbj47XG59XG4iXSwiZmlsZSI6IkM6L1VzZXJzL3JhdWxtL0Rvd25sb2Fkcy9maW5hbmNlYWFwL2Zyb250ZW5kL3NyYy9wYWdlcy9SQkFDUGFnZS50c3gifQ==

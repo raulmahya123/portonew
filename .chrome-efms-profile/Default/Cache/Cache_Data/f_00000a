@@ -1,0 +1,471 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/AccountSettingsPage.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=758c0afe"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import { ArrowLeft, Camera, KeyRound, ShieldCheck, UserRound } from "/node_modules/.vite/deps/lucide-react.js?v=758c0afe";
+import { PageHeader } from "/src/components/PageHeader.tsx";
+export function AccountSettingsPage({
+  user,
+  auditLogs,
+  onBack
+}) {
+  const userLogs = auditLogs.filter((log) => !log.user || log.user === user.name).slice(0, 12);
+  return /* @__PURE__ */ jsxDEV("section", { className: "account-page", children: [
+    /* @__PURE__ */ jsxDEV(
+      PageHeader,
+      {
+        title: "Account Settings",
+        description: "Profil akun, data karyawan, akses role, keamanan login, dan riwayat aktivitas user.",
+        meta: /* @__PURE__ */ jsxDEV("button", { className: "ghost", onClick: onBack, children: [
+          /* @__PURE__ */ jsxDEV(ArrowLeft, { size: 16 }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 39,
+            columnNumber: 56
+          }, this),
+          " Back"
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 39,
+          columnNumber: 13
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 36,
+        columnNumber: 5
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV("section", { className: "account-profile account-profile-page", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "account-avatar large", children: [
+        /* @__PURE__ */ jsxDEV(UserRound, { size: 52 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 44,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { title: "Upload foto karyawan", children: /* @__PURE__ */ jsxDEV(Camera, { size: 16 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 45,
+          columnNumber: 46
+        }, this) }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 45,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 43,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("p", { className: "eyebrow", children: "Employee Account" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 48,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("h2", { children: user.name }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 49,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: user.email }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 50,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "header-meta", children: user.role }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 51,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 47,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+      lineNumber: 42,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "account-grid account-grid-page", children: [
+      /* @__PURE__ */ jsxDEV("section", { children: [
+        /* @__PURE__ */ jsxDEV("h4", { children: "Data Karyawan" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 57,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("dl", { children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Employee ID" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 59,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: [
+              "EMP-",
+              String(user.id).padStart(5, "0")
+            ] }, void 0, true, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 59,
+              columnNumber: 36
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 59,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Full Name" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 60,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: user.name }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 60,
+              columnNumber: 34
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 60,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Email" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 61,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: user.email }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 61,
+              columnNumber: 30
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 61,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Status" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 62,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: user.status }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 62,
+              columnNumber: 31
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 62,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Department" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 63,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: "Belum tersedia di API" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 63,
+              columnNumber: 35
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 63,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Position" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 64,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: user.role }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 64,
+              columnNumber: 33
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 64,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Company" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 65,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: "Belum tersedia di API" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 65,
+              columnNumber: 32
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 65,
+            columnNumber: 11
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 58,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 56,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("section", { children: [
+        /* @__PURE__ */ jsxDEV("h4", { children: "Akses dan Keamanan" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 70,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("dl", { children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Role" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 72,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: user.role }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 72,
+              columnNumber: 29
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 72,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "2FA" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 73,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: user.twoFactorEnabled ? "Enabled" : "Not enabled" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 73,
+              columnNumber: 28
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 73,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Login Method" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 74,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: "Email + Password" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 74,
+              columnNumber: 37
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 74,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Session" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 75,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: "JWT authenticated" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 75,
+              columnNumber: 32
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 75,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Scope" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 76,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: "Company, Site, Department, Project" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 76,
+              columnNumber: 30
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 76,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("dt", { children: "Password Policy" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 77,
+              columnNumber: 16
+            }, this),
+            /* @__PURE__ */ jsxDEV("dd", { children: "Managed by backend auth" }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+              lineNumber: 77,
+              columnNumber: 40
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 77,
+            columnNumber: 11
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 71,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 69,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+      lineNumber: 55,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "permission-section account-section-page", children: [
+      /* @__PURE__ */ jsxDEV("h4", { children: [
+        /* @__PURE__ */ jsxDEV(ShieldCheck, { size: 16 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 83,
+          columnNumber: 11
+        }, this),
+        " Permission Summary"
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 83,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "permission-tags", children: permissionHints(user.role).map((item) => /* @__PURE__ */ jsxDEV("span", { children: item }, item, false, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 85,
+        columnNumber: 51
+      }, this)) }, void 0, false, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 84,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+      lineNumber: 82,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "permission-section account-section-page", children: [
+      /* @__PURE__ */ jsxDEV("h4", { children: [
+        /* @__PURE__ */ jsxDEV(KeyRound, { size: 16 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 90,
+          columnNumber: 11
+        }, this),
+        " Aktivitas Akun"
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 90,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "account-activity account-activity-page", children: [
+        userLogs.map((log) => /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("strong", { children: [
+            log.action,
+            " - ",
+            log.module
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 93,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            log.referenceType,
+            " #",
+            log.referenceId
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 94,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("small", { children: new Date(log.createdAt).toLocaleString("id-ID") }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+            lineNumber: 95,
+            columnNumber: 11
+          }, this)
+        ] }, log.id, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 92,
+          columnNumber: 32
+        }, this)),
+        !userLogs.length && /* @__PURE__ */ jsxDEV("p", { children: "Belum ada audit log spesifik untuk akun ini." }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+          lineNumber: 97,
+          columnNumber: 30
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+        lineNumber: 91,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+      lineNumber: 89,
+      columnNumber: 5
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx",
+    lineNumber: 35,
+    columnNumber: 10
+  }, this);
+}
+_c = AccountSettingsPage;
+function permissionHints(role) {
+  if (role === "Super Admin") return ["Full access", "User & Role Management", "Master Data", "Approval", "Accounting", "Audit Trail"];
+  if (role.includes("Finance")) return ["Approval", "Accounting", "Financial Report", "Dashboard"];
+  if (role.includes("Budget")) return ["Budget Management", "Budget Control", "Approval"];
+  return ["Read Master Data", "Submit Request", "View Dashboard"];
+}
+var _c;
+$RefreshReg$(_c, "AccountSettingsPage");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/raulm/Downloads/financeaap/frontend/src/pages/AccountSettingsPage.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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LGVBQWhDO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQTRDO0FBQUEsVUFDNUMsdUJBQUMsV0FBTyxjQUFJQyxLQUFLakIsSUFBSWtCLFNBQVMsRUFBRUMsZUFBZSxPQUFPLEtBQXREO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQXdEO0FBQUEsYUFIekJuQixJQUFJTSxJQUFkO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFJdkIsQ0FBTTtBQUFBLFFBQ0wsQ0FBQ1IsU0FBU3NCLFVBQVUsdUJBQUMsT0FBRSw0REFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQStDO0FBQUEsV0FOdEU7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQU9BO0FBQUEsU0FURjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBVUE7QUFBQSxPQWhFSztBQUFBO0FBQUE7QUFBQTtBQUFBLFNBaUVQO0FBQ0Y7QUFBQ0MsS0E3RWUzQjtBQStFaEIsU0FBU2dCLGdCQUFnQk4sTUFBYztBQUNyQyxNQUFJQSxTQUFTLGNBQWUsUUFBTyxDQUFDLGVBQWUsMEJBQTBCLGVBQWUsWUFBWSxjQUFjLGFBQWE7QUFDbkksTUFBSUEsS0FBS2tCLFNBQVMsU0FBUyxFQUFHLFFBQU8sQ0FBQyxZQUFZLGNBQWMsb0JBQW9CLFdBQVc7QUFDL0YsTUFBSWxCLEtBQUtrQixTQUFTLFFBQVEsRUFBRyxRQUFPLENBQUMscUJBQXFCLGtCQUFrQixVQUFVO0FBQ3RGLFNBQU8sQ0FBQyxvQkFBb0Isa0JBQWtCLGdCQUFnQjtBQUNoRTtBQUFDLElBQUFEO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIkFycm93TGVmdCIsIkNhbWVyYSIsIktleVJvdW5kIiwiU2hpZWxkQ2hlY2siLCJVc2VyUm91bmQiLCJQYWdlSGVhZGVyIiwiQWNjb3VudFNldHRpbmdzUGFnZSIsInVzZXIiLCJhdWRpdExvZ3MiLCJvbkJhY2siLCJ1c2VyTG9ncyIsImZpbHRlciIsImxvZyIsIm5hbWUiLCJzbGljZSIsImVtYWlsIiwicm9sZSIsIlN0cmluZyIsImlkIiwicGFkU3RhcnQiLCJzdGF0dXMiLCJ0d29GYWN0b3JFbmFibGVkIiwicGVybWlzc2lvbkhpbnRzIiwibWFwIiwiaXRlbSIsImFjdGlvbiIsIm1vZHVsZSIsInJlZmVyZW5jZVR5cGUiLCJyZWZlcmVuY2VJZCIsIkRhdGUiLCJjcmVhdGVkQXQiLCJ0b0xvY2FsZVN0cmluZyIsImxlbmd0aCIsIl9jIiwiaW5jbHVkZXMiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiQWNjb3VudFNldHRpbmdzUGFnZS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQXJyb3dMZWZ0LCBDYW1lcmEsIEtleVJvdW5kLCBTaGllbGRDaGVjaywgVXNlclJvdW5kIH0gZnJvbSBcImx1Y2lkZS1yZWFjdFwiO1xuaW1wb3J0IHsgUGFnZUhlYWRlciB9IGZyb20gXCIuLi9jb21wb25lbnRzL1BhZ2VIZWFkZXJcIjtcbmltcG9ydCB0eXBlIHsgQXVkaXRMb2csIFVzZXIgfSBmcm9tIFwiLi4vbGliL2FwaVwiO1xuXG5leHBvcnQgZnVuY3Rpb24gQWNjb3VudFNldHRpbmdzUGFnZSh7XG4gIHVzZXIsXG4gIGF1ZGl0TG9ncyxcbiAgb25CYWNrXG59OiB7XG4gIHVzZXI6IFVzZXI7XG4gIGF1ZGl0TG9nczogQXVkaXRMb2dbXTtcbiAgb25CYWNrOiAoKSA9PiB2b2lkO1xufSkge1xuICBjb25zdCB1c2VyTG9ncyA9IGF1ZGl0TG9ncy5maWx0ZXIoKGxvZykgPT4gIWxvZy51c2VyIHx8IGxvZy51c2VyID09PSB1c2VyLm5hbWUpLnNsaWNlKDAsIDEyKTtcblxuICByZXR1cm4gPHNlY3Rpb24gY2xhc3NOYW1lPVwiYWNjb3VudC1wYWdlXCI+XG4gICAgPFBhZ2VIZWFkZXJcbiAgICAgIHRpdGxlPVwiQWNjb3VudCBTZXR0aW5nc1wiXG4gICAgICBkZXNjcmlwdGlvbj1cIlByb2ZpbCBha3VuLCBkYXRhIGthcnlhd2FuLCBha3NlcyByb2xlLCBrZWFtYW5hbiBsb2dpbiwgZGFuIHJpd2F5YXQgYWt0aXZpdGFzIHVzZXIuXCJcbiAgICAgIG1ldGE9ezxidXR0b24gY2xhc3NOYW1lPVwiZ2hvc3RcIiBvbkNsaWNrPXtvbkJhY2t9PjxBcnJvd0xlZnQgc2l6ZT17MTZ9IC8+IEJhY2s8L2J1dHRvbj59XG4gICAgLz5cblxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImFjY291bnQtcHJvZmlsZSBhY2NvdW50LXByb2ZpbGUtcGFnZVwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhY2NvdW50LWF2YXRhciBsYXJnZVwiPlxuICAgICAgICA8VXNlclJvdW5kIHNpemU9ezUyfSAvPlxuICAgICAgICA8YnV0dG9uIHRpdGxlPVwiVXBsb2FkIGZvdG8ga2FyeWF3YW5cIj48Q2FtZXJhIHNpemU9ezE2fSAvPjwvYnV0dG9uPlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2PlxuICAgICAgICA8cCBjbGFzc05hbWU9XCJleWVicm93XCI+RW1wbG95ZWUgQWNjb3VudDwvcD5cbiAgICAgICAgPGgyPnt1c2VyLm5hbWV9PC9oMj5cbiAgICAgICAgPHA+e3VzZXIuZW1haWx9PC9wPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJoZWFkZXItbWV0YVwiPnt1c2VyLnJvbGV9PC9zcGFuPlxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuXG4gICAgPGRpdiBjbGFzc05hbWU9XCJhY2NvdW50LWdyaWQgYWNjb3VudC1ncmlkLXBhZ2VcIj5cbiAgICAgIDxzZWN0aW9uPlxuICAgICAgICA8aDQ+RGF0YSBLYXJ5YXdhbjwvaDQ+XG4gICAgICAgIDxkbD5cbiAgICAgICAgICA8ZGl2PjxkdD5FbXBsb3llZSBJRDwvZHQ+PGRkPkVNUC17U3RyaW5nKHVzZXIuaWQpLnBhZFN0YXJ0KDUsIFwiMFwiKX08L2RkPjwvZGl2PlxuICAgICAgICAgIDxkaXY+PGR0PkZ1bGwgTmFtZTwvZHQ+PGRkPnt1c2VyLm5hbWV9PC9kZD48L2Rpdj5cbiAgICAgICAgICA8ZGl2PjxkdD5FbWFpbDwvZHQ+PGRkPnt1c2VyLmVtYWlsfTwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+U3RhdHVzPC9kdD48ZGQ+e3VzZXIuc3RhdHVzfTwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+RGVwYXJ0bWVudDwvZHQ+PGRkPkJlbHVtIHRlcnNlZGlhIGRpIEFQSTwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+UG9zaXRpb248L2R0PjxkZD57dXNlci5yb2xlfTwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+Q29tcGFueTwvZHQ+PGRkPkJlbHVtIHRlcnNlZGlhIGRpIEFQSTwvZGQ+PC9kaXY+XG4gICAgICAgIDwvZGw+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIDxzZWN0aW9uPlxuICAgICAgICA8aDQ+QWtzZXMgZGFuIEtlYW1hbmFuPC9oND5cbiAgICAgICAgPGRsPlxuICAgICAgICAgIDxkaXY+PGR0PlJvbGU8L2R0PjxkZD57dXNlci5yb2xlfTwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+MkZBPC9kdD48ZGQ+e3VzZXIudHdvRmFjdG9yRW5hYmxlZCA/IFwiRW5hYmxlZFwiIDogXCJOb3QgZW5hYmxlZFwifTwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+TG9naW4gTWV0aG9kPC9kdD48ZGQ+RW1haWwgKyBQYXNzd29yZDwvZGQ+PC9kaXY+XG4gICAgICAgICAgPGRpdj48ZHQ+U2Vzc2lvbjwvZHQ+PGRkPkpXVCBhdXRoZW50aWNhdGVkPC9kZD48L2Rpdj5cbiAgICAgICAgICA8ZGl2PjxkdD5TY29wZTwvZHQ+PGRkPkNvbXBhbnksIFNpdGUsIERlcGFydG1lbnQsIFByb2plY3Q8L2RkPjwvZGl2PlxuICAgICAgICAgIDxkaXY+PGR0PlBhc3N3b3JkIFBvbGljeTwvZHQ+PGRkPk1hbmFnZWQgYnkgYmFja2VuZCBhdXRoPC9kZD48L2Rpdj5cbiAgICAgICAgPC9kbD5cbiAgICAgIDwvc2VjdGlvbj5cbiAgICA8L2Rpdj5cblxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cInBlcm1pc3Npb24tc2VjdGlvbiBhY2NvdW50LXNlY3Rpb24tcGFnZVwiPlxuICAgICAgPGg0PjxTaGllbGRDaGVjayBzaXplPXsxNn0gLz4gUGVybWlzc2lvbiBTdW1tYXJ5PC9oND5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGVybWlzc2lvbi10YWdzXCI+XG4gICAgICAgIHtwZXJtaXNzaW9uSGludHModXNlci5yb2xlKS5tYXAoKGl0ZW0pID0+IDxzcGFuIGtleT17aXRlbX0+e2l0ZW19PC9zcGFuPil9XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG5cbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJwZXJtaXNzaW9uLXNlY3Rpb24gYWNjb3VudC1zZWN0aW9uLXBhZ2VcIj5cbiAgICAgIDxoND48S2V5Um91bmQgc2l6ZT17MTZ9IC8+IEFrdGl2aXRhcyBBa3VuPC9oND5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWNjb3VudC1hY3Rpdml0eSBhY2NvdW50LWFjdGl2aXR5LXBhZ2VcIj5cbiAgICAgICAge3VzZXJMb2dzLm1hcCgobG9nKSA9PiA8ZGl2IGtleT17bG9nLmlkfT5cbiAgICAgICAgICA8c3Ryb25nPntsb2cuYWN0aW9ufSAtIHtsb2cubW9kdWxlfTwvc3Ryb25nPlxuICAgICAgICAgIDxzcGFuPntsb2cucmVmZXJlbmNlVHlwZX0gI3tsb2cucmVmZXJlbmNlSWR9PC9zcGFuPlxuICAgICAgICAgIDxzbWFsbD57bmV3IERhdGUobG9nLmNyZWF0ZWRBdCkudG9Mb2NhbGVTdHJpbmcoXCJpZC1JRFwiKX08L3NtYWxsPlxuICAgICAgICA8L2Rpdj4pfVxuICAgICAgICB7IXVzZXJMb2dzLmxlbmd0aCAmJiA8cD5CZWx1bSBhZGEgYXVkaXQgbG9nIHNwZXNpZmlrIHVudHVrIGFrdW4gaW5pLjwvcD59XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gIDwvc2VjdGlvbj47XG59XG5cbmZ1bmN0aW9uIHBlcm1pc3Npb25IaW50cyhyb2xlOiBzdHJpbmcpIHtcbiAgaWYgKHJvbGUgPT09IFwiU3VwZXIgQWRtaW5cIikgcmV0dXJuIFtcIkZ1bGwgYWNjZXNzXCIsIFwiVXNlciAmIFJvbGUgTWFuYWdlbWVudFwiLCBcIk1hc3RlciBEYXRhXCIsIFwiQXBwcm92YWxcIiwgXCJBY2NvdW50aW5nXCIsIFwiQXVkaXQgVHJhaWxcIl07XG4gIGlmIChyb2xlLmluY2x1ZGVzKFwiRmluYW5jZVwiKSkgcmV0dXJuIFtcIkFwcHJvdmFsXCIsIFwiQWNjb3VudGluZ1wiLCBcIkZpbmFuY2lhbCBSZXBvcnRcIiwgXCJEYXNoYm9hcmRcIl07XG4gIGlmIChyb2xlLmluY2x1ZGVzKFwiQnVkZ2V0XCIpKSByZXR1cm4gW1wiQnVkZ2V0IE1hbmFnZW1lbnRcIiwgXCJCdWRnZXQgQ29udHJvbFwiLCBcIkFwcHJvdmFsXCJdO1xuICByZXR1cm4gW1wiUmVhZCBNYXN0ZXIgRGF0YVwiLCBcIlN1Ym1pdCBSZXF1ZXN0XCIsIFwiVmlldyBEYXNoYm9hcmRcIl07XG59XG4iXSwiZmlsZSI6IkM6L1VzZXJzL3JhdWxtL0Rvd25sb2Fkcy9maW5hbmNlYWFwL2Zyb250ZW5kL3NyYy9wYWdlcy9BY2NvdW50U2V0dGluZ3NQYWdlLnRzeCJ9

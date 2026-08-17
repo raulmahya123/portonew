@@ -1,0 +1,244 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/MasterDataForm.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=758c0afe"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import { ArrowLeft, RefreshCw } from "/node_modules/.vite/deps/lucide-react.js?v=758c0afe";
+import __vite__cjsImport4_react from "/node_modules/.vite/deps/react.js?v=758c0afe"; const useEffect = __vite__cjsImport4_react["useEffect"]; const useMemo = __vite__cjsImport4_react["useMemo"]; const useState = __vite__cjsImport4_react["useState"];
+import { schemaFor, metadataOf } from "/src/data/masterSchemas.ts";
+import { createMasterRecord, previewNumber, updateMasterRecord } from "/src/lib/api.ts";
+export function MasterDataForm({
+  type,
+  record,
+  onCancel,
+  onSaved
+}) {
+  _s();
+  const schema = useMemo(() => schemaFor(type), [type]);
+  const [form, setForm] = useState({});
+  const [error, setError] = useState("");
+  const [numberPreview, setNumberPreview] = useState("");
+  const [previewLoading, setPreviewLoading] = useState(false);
+  const [previewError, setPreviewError] = useState("");
+  useEffect(() => {
+    const metadata = metadataOf(record);
+    setForm({
+      ...metadata,
+      type: record?.type ?? type,
+      code: record?.code ?? "",
+      name: record?.name ?? "",
+      status: record?.status ?? "active"
+    });
+    if (record) {
+      setNumberPreview(record.code);
+      return;
+    }
+    loadPreview();
+  }, [record, type]);
+  async function loadPreview() {
+    setPreviewLoading(true);
+    setPreviewError("");
+    try {
+      const result = await previewNumber("master_records", type);
+      setNumberPreview(result.nextNumber);
+    } catch (err) {
+      setNumberPreview("");
+      setPreviewError(err instanceof Error ? err.message : "Gagal mengambil nomor dari backend");
+    } finally {
+      setPreviewLoading(false);
+    }
+  }
+  async function submit(event) {
+    event.preventDefault();
+    setError("");
+    const metadata = {};
+    schema.fields.forEach((field) => {
+      if (!["type", "code", "name", "status"].includes(field.key)) {
+        metadata[field.key] = form[field.key] ?? "";
+      }
+    });
+    const payload = {
+      type,
+      code: record?.code ?? "",
+      name: form.name ?? "",
+      status: form.status ?? "active",
+      metadata: JSON.stringify(metadata)
+    };
+    try {
+      if (record) {
+        await updateMasterRecord(record.id, payload);
+      } else {
+        await createMasterRecord(payload);
+      }
+      onSaved();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Master data gagal disimpan");
+    }
+  }
+  return /* @__PURE__ */ jsxDEV("section", { className: "entity-page", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "entity-page-head", children: [
+      /* @__PURE__ */ jsxDEV("button", { type: "button", className: "ghost", onClick: onCancel, children: [
+        /* @__PURE__ */ jsxDEV(ArrowLeft, { size: 16 }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 103,
+          columnNumber: 66
+        }, this),
+        " Back"
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 103,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "header-meta", children: record ? "Edit Mode" : "Create Mode" }, void 0, false, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 104,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+      lineNumber: 102,
+      columnNumber: 5
+    }, this),
+    /* @__PURE__ */ jsxDEV("form", { onSubmit: submit, children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "panel-head", children: /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("p", { className: "eyebrow", children: schema.title }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 109,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("h3", { children: record ? "Update Master Data" : "Create Master Data" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 110,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 108,
+        columnNumber: 9
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 107,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "master-form-grid", children: schema.fields.map((field) => /* @__PURE__ */ jsxDEV("label", { children: [
+        field.label,
+        field.key === "code" ? /* @__PURE__ */ jsxDEV("div", { className: "number-preview-field", children: [
+          /* @__PURE__ */ jsxDEV("input", { value: previewLoading ? "Loading number..." : numberPreview, readOnly: true, required: true }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+            lineNumber: 116,
+            columnNumber: 13
+          }, this),
+          !record && previewError && /* @__PURE__ */ jsxDEV("button", { type: "button", className: "ghost", onClick: loadPreview, children: [
+            /* @__PURE__ */ jsxDEV(RefreshCw, { size: 15 }, void 0, false, {
+              fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+              lineNumber: 117,
+              columnNumber: 103
+            }, this),
+            " Retry"
+          ] }, void 0, true, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+            lineNumber: 117,
+            columnNumber: 41
+          }, this),
+          !record && previewError && /* @__PURE__ */ jsxDEV("small", { children: previewError }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+            lineNumber: 118,
+            columnNumber: 41
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 115,
+          columnNumber: 35
+        }, this) : field.type === "select" ? /* @__PURE__ */ jsxDEV("select", { value: form[field.key] ?? "", onChange: (event) => setForm({ ...form, [field.key]: event.target.value }), required: field.required, children: [
+          /* @__PURE__ */ jsxDEV("option", { value: "", children: "Select" }, void 0, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+            lineNumber: 121,
+            columnNumber: 13
+          }, this),
+          field.options?.map((option) => /* @__PURE__ */ jsxDEV("option", { value: option, children: option }, option, false, {
+            fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+            lineNumber: 122,
+            columnNumber: 45
+          }, this))
+        ] }, void 0, true, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 120,
+          columnNumber: 37
+        }, this) : /* @__PURE__ */ jsxDEV("input", { value: form[field.key] ?? "", onChange: (event) => setForm({ ...form, [field.key]: event.target.value }), required: field.required }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 123,
+          columnNumber: 23
+        }, this)
+      ] }, field.key, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 114,
+        columnNumber: 39
+      }, this)) }, void 0, false, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 113,
+        columnNumber: 7
+      }, this),
+      error && /* @__PURE__ */ jsxDEV("div", { className: "error", children: error }, void 0, false, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 126,
+        columnNumber: 17
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "form-actions", children: [
+        /* @__PURE__ */ jsxDEV("button", { type: "button", className: "ghost", onClick: onCancel, children: "Cancel" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 128,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: "primary", disabled: !record && !numberPreview, children: record ? "Update" : "Create" }, void 0, false, {
+          fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+          lineNumber: 129,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+        lineNumber: 127,
+        columnNumber: 7
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+      lineNumber: 106,
+      columnNumber: 5
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx",
+    lineNumber: 101,
+    columnNumber: 10
+  }, this);
+}
+_s(MasterDataForm, "nt7JUUhPYmlpIG/1+ibVws8iX0M=");
+_c = MasterDataForm;
+var _c;
+$RefreshReg$(_c, "MasterDataForm");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/raulm/Downloads/financeaap/frontend/src/components/MasterDataForm.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QSxtQkFBeEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUE4QjtBQUFBLE1BQ3hDLHVCQUFDLFNBQUksV0FBVSxnQkFDYjtBQUFBLCtCQUFDLFlBQU8sTUFBSyxVQUFTLFdBQVUsU0FBUSxTQUFTTixVQUFVLHNCQUEzRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQWlFO0FBQUEsUUFDakUsdUJBQUMsWUFBTyxXQUFVLFdBQVUsVUFBVSxDQUFDRCxVQUFVLENBQUNTLGVBQWdCVCxtQkFBUyxXQUFXLFlBQXRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBK0Y7QUFBQSxXQUZqRztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBR0E7QUFBQSxTQXhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBeUJBO0FBQUEsT0E5Qks7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQStCUDtBQUNGO0FBQUNHLEdBNUdlTCxnQkFBYztBQUFBLEtBQWRBO0FBQWMsSUFBQStDO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIkFycm93TGVmdCIsIlJlZnJlc2hDdyIsInVzZUVmZmVjdCIsInVzZU1lbW8iLCJ1c2VTdGF0ZSIsInNjaGVtYUZvciIsIm1ldGFkYXRhT2YiLCJjcmVhdGVNYXN0ZXJSZWNvcmQiLCJwcmV2aWV3TnVtYmVyIiwidXBkYXRlTWFzdGVyUmVjb3JkIiwiTWFzdGVyRGF0YUZvcm0iLCJ0eXBlIiwicmVjb3JkIiwib25DYW5jZWwiLCJvblNhdmVkIiwiX3MiLCJzY2hlbWEiLCJmb3JtIiwic2V0Rm9ybSIsImVycm9yIiwic2V0RXJyb3IiLCJudW1iZXJQcmV2aWV3Iiwic2V0TnVtYmVyUHJldmlldyIsInByZXZpZXdMb2FkaW5nIiwic2V0UHJldmlld0xvYWRpbmciLCJwcmV2aWV3RXJyb3IiLCJzZXRQcmV2aWV3RXJyb3IiLCJtZXRhZGF0YSIsImNvZGUiLCJuYW1lIiwic3RhdHVzIiwibG9hZFByZXZpZXciLCJyZXN1bHQiLCJuZXh0TnVtYmVyIiwiZXJyIiwiRXJyb3IiLCJtZXNzYWdlIiwic3VibWl0IiwiZXZlbnQiLCJwcmV2ZW50RGVmYXVsdCIsImZpZWxkcyIsImZvckVhY2giLCJmaWVsZCIsImluY2x1ZGVzIiwia2V5IiwicGF5bG9hZCIsIkpTT04iLCJzdHJpbmdpZnkiLCJpZCIsInRpdGxlIiwibWFwIiwibGFiZWwiLCJ0YXJnZXQiLCJ2YWx1ZSIsInJlcXVpcmVkIiwib3B0aW9ucyIsIm9wdGlvbiIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk1hc3RlckRhdGFGb3JtLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBcnJvd0xlZnQsIFJlZnJlc2hDdyB9IGZyb20gXCJsdWNpZGUtcmVhY3RcIjtcbmltcG9ydCB7IHVzZUVmZmVjdCwgdXNlTWVtbywgdXNlU3RhdGUgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7IHNjaGVtYUZvciwgbWV0YWRhdGFPZiB9IGZyb20gXCIuLi9kYXRhL21hc3RlclNjaGVtYXNcIjtcbmltcG9ydCB7IGNyZWF0ZU1hc3RlclJlY29yZCwgcHJldmlld051bWJlciwgdXBkYXRlTWFzdGVyUmVjb3JkLCB0eXBlIE1hc3RlclJlY29yZCB9IGZyb20gXCIuLi9saWIvYXBpXCI7XG5cbmV4cG9ydCBmdW5jdGlvbiBNYXN0ZXJEYXRhRm9ybSh7XG4gIHR5cGUsXG4gIHJlY29yZCxcbiAgb25DYW5jZWwsXG4gIG9uU2F2ZWRcbn06IHtcbiAgdHlwZTogc3RyaW5nO1xuICByZWNvcmQ/OiBNYXN0ZXJSZWNvcmQgfCBudWxsO1xuICBvbkNhbmNlbDogKCkgPT4gdm9pZDtcbiAgb25TYXZlZDogKCkgPT4gdm9pZDtcbn0pIHtcbiAgY29uc3Qgc2NoZW1hID0gdXNlTWVtbygoKSA9PiBzY2hlbWFGb3IodHlwZSksIFt0eXBlXSk7XG4gIGNvbnN0IFtmb3JtLCBzZXRGb3JtXSA9IHVzZVN0YXRlPFJlY29yZDxzdHJpbmcsIHN0cmluZz4+KHt9KTtcbiAgY29uc3QgW2Vycm9yLCBzZXRFcnJvcl0gPSB1c2VTdGF0ZShcIlwiKTtcbiAgY29uc3QgW251bWJlclByZXZpZXcsIHNldE51bWJlclByZXZpZXddID0gdXNlU3RhdGUoXCJcIik7XG4gIGNvbnN0IFtwcmV2aWV3TG9hZGluZywgc2V0UHJldmlld0xvYWRpbmddID0gdXNlU3RhdGUoZmFsc2UpO1xuICBjb25zdCBbcHJldmlld0Vycm9yLCBzZXRQcmV2aWV3RXJyb3JdID0gdXNlU3RhdGUoXCJcIik7XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBjb25zdCBtZXRhZGF0YSA9IG1ldGFkYXRhT2YocmVjb3JkKTtcbiAgICBzZXRGb3JtKHtcbiAgICAgIC4uLm1ldGFkYXRhLFxuICAgICAgdHlwZTogcmVjb3JkPy50eXBlID8/IHR5cGUsXG4gICAgICBjb2RlOiByZWNvcmQ/LmNvZGUgPz8gXCJcIixcbiAgICAgIG5hbWU6IHJlY29yZD8ubmFtZSA/PyBcIlwiLFxuICAgICAgc3RhdHVzOiByZWNvcmQ/LnN0YXR1cyA/PyBcImFjdGl2ZVwiXG4gICAgfSk7XG4gICAgaWYgKHJlY29yZCkge1xuICAgICAgc2V0TnVtYmVyUHJldmlldyhyZWNvcmQuY29kZSk7XG4gICAgICByZXR1cm47XG4gICAgfVxuICAgIGxvYWRQcmV2aWV3KCk7XG4gIH0sIFtyZWNvcmQsIHR5cGVdKTtcblxuICBhc3luYyBmdW5jdGlvbiBsb2FkUHJldmlldygpIHtcbiAgICBzZXRQcmV2aWV3TG9hZGluZyh0cnVlKTtcbiAgICBzZXRQcmV2aWV3RXJyb3IoXCJcIik7XG4gICAgdHJ5IHtcbiAgICAgIGNvbnN0IHJlc3VsdCA9IGF3YWl0IHByZXZpZXdOdW1iZXIoXCJtYXN0ZXJfcmVjb3Jkc1wiLCB0eXBlKTtcbiAgICAgIHNldE51bWJlclByZXZpZXcocmVzdWx0Lm5leHROdW1iZXIpO1xuICAgIH0gY2F0Y2ggKGVycikge1xuICAgICAgc2V0TnVtYmVyUHJldmlldyhcIlwiKTtcbiAgICAgIHNldFByZXZpZXdFcnJvcihlcnIgaW5zdGFuY2VvZiBFcnJvciA/IGVyci5tZXNzYWdlIDogXCJHYWdhbCBtZW5nYW1iaWwgbm9tb3IgZGFyaSBiYWNrZW5kXCIpO1xuICAgIH0gZmluYWxseSB7XG4gICAgICBzZXRQcmV2aWV3TG9hZGluZyhmYWxzZSk7XG4gICAgfVxuICB9XG5cbiAgYXN5bmMgZnVuY3Rpb24gc3VibWl0KGV2ZW50OiBSZWFjdC5Gb3JtRXZlbnQpIHtcbiAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuICAgIHNldEVycm9yKFwiXCIpO1xuICAgIGNvbnN0IG1ldGFkYXRhOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0ge307XG4gICAgc2NoZW1hLmZpZWxkcy5mb3JFYWNoKChmaWVsZCkgPT4ge1xuICAgICAgaWYgKCFbXCJ0eXBlXCIsIFwiY29kZVwiLCBcIm5hbWVcIiwgXCJzdGF0dXNcIl0uaW5jbHVkZXMoZmllbGQua2V5KSkge1xuICAgICAgICBtZXRhZGF0YVtmaWVsZC5rZXldID0gZm9ybVtmaWVsZC5rZXldID8/IFwiXCI7XG4gICAgICB9XG4gICAgfSk7XG4gICAgY29uc3QgcGF5bG9hZCA9IHtcbiAgICAgIHR5cGUsXG4gICAgICBjb2RlOiByZWNvcmQ/LmNvZGUgPz8gXCJcIixcbiAgICAgIG5hbWU6IGZvcm0ubmFtZSA/PyBcIlwiLFxuICAgICAgc3RhdHVzOiBmb3JtLnN0YXR1cyA/PyBcImFjdGl2ZVwiLFxuICAgICAgbWV0YWRhdGE6IEpTT04uc3RyaW5naWZ5KG1ldGFkYXRhKVxuICAgIH07XG4gICAgdHJ5IHtcbiAgICAgIGlmIChyZWNvcmQpIHtcbiAgICAgICAgYXdhaXQgdXBkYXRlTWFzdGVyUmVjb3JkKHJlY29yZC5pZCwgcGF5bG9hZCk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBhd2FpdCBjcmVhdGVNYXN0ZXJSZWNvcmQocGF5bG9hZCk7XG4gICAgICB9XG4gICAgICBvblNhdmVkKCk7XG4gICAgfSBjYXRjaCAoZXJyKSB7XG4gICAgICBzZXRFcnJvcihlcnIgaW5zdGFuY2VvZiBFcnJvciA/IGVyci5tZXNzYWdlIDogXCJNYXN0ZXIgZGF0YSBnYWdhbCBkaXNpbXBhblwiKTtcbiAgICB9XG4gIH1cblxuICByZXR1cm4gPHNlY3Rpb24gY2xhc3NOYW1lPVwiZW50aXR5LXBhZ2VcIj5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImVudGl0eS1wYWdlLWhlYWRcIj5cbiAgICAgIDxidXR0b24gdHlwZT1cImJ1dHRvblwiIGNsYXNzTmFtZT1cImdob3N0XCIgb25DbGljaz17b25DYW5jZWx9PjxBcnJvd0xlZnQgc2l6ZT17MTZ9IC8+IEJhY2s8L2J1dHRvbj5cbiAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImhlYWRlci1tZXRhXCI+e3JlY29yZCA/IFwiRWRpdCBNb2RlXCIgOiBcIkNyZWF0ZSBNb2RlXCJ9PC9zcGFuPlxuICAgIDwvZGl2PlxuICAgIDxmb3JtIG9uU3VibWl0PXtzdWJtaXR9PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJwYW5lbC1oZWFkXCI+XG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZXllYnJvd1wiPntzY2hlbWEudGl0bGV9PC9wPlxuICAgICAgICAgIDxoMz57cmVjb3JkID8gXCJVcGRhdGUgTWFzdGVyIERhdGFcIiA6IFwiQ3JlYXRlIE1hc3RlciBEYXRhXCJ9PC9oMz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWFzdGVyLWZvcm0tZ3JpZFwiPlxuICAgICAgICB7c2NoZW1hLmZpZWxkcy5tYXAoKGZpZWxkKSA9PiA8bGFiZWwga2V5PXtmaWVsZC5rZXl9PntmaWVsZC5sYWJlbH1cbiAgICAgICAgICB7ZmllbGQua2V5ID09PSBcImNvZGVcIiA/IDxkaXYgY2xhc3NOYW1lPVwibnVtYmVyLXByZXZpZXctZmllbGRcIj5cbiAgICAgICAgICAgIDxpbnB1dCB2YWx1ZT17cHJldmlld0xvYWRpbmcgPyBcIkxvYWRpbmcgbnVtYmVyLi4uXCIgOiBudW1iZXJQcmV2aWV3fSByZWFkT25seSByZXF1aXJlZCAvPlxuICAgICAgICAgICAgeyFyZWNvcmQgJiYgcHJldmlld0Vycm9yICYmIDxidXR0b24gdHlwZT1cImJ1dHRvblwiIGNsYXNzTmFtZT1cImdob3N0XCIgb25DbGljaz17bG9hZFByZXZpZXd9PjxSZWZyZXNoQ3cgc2l6ZT17MTV9IC8+IFJldHJ5PC9idXR0b24+fVxuICAgICAgICAgICAgeyFyZWNvcmQgJiYgcHJldmlld0Vycm9yICYmIDxzbWFsbD57cHJldmlld0Vycm9yfTwvc21hbGw+fVxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgOiBmaWVsZC50eXBlID09PSBcInNlbGVjdFwiID8gPHNlbGVjdCB2YWx1ZT17Zm9ybVtmaWVsZC5rZXldID8/IFwiXCJ9IG9uQ2hhbmdlPXsoZXZlbnQpID0+IHNldEZvcm0oeyAuLi5mb3JtLCBbZmllbGQua2V5XTogZXZlbnQudGFyZ2V0LnZhbHVlIH0pfSByZXF1aXJlZD17ZmllbGQucmVxdWlyZWR9PlxuICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT1cIlwiPlNlbGVjdDwvb3B0aW9uPlxuICAgICAgICAgICAge2ZpZWxkLm9wdGlvbnM/Lm1hcCgob3B0aW9uKSA9PiA8b3B0aW9uIGtleT17b3B0aW9ufSB2YWx1ZT17b3B0aW9ufT57b3B0aW9ufTwvb3B0aW9uPil9XG4gICAgICAgICAgPC9zZWxlY3Q+IDogPGlucHV0IHZhbHVlPXtmb3JtW2ZpZWxkLmtleV0gPz8gXCJcIn0gb25DaGFuZ2U9eyhldmVudCkgPT4gc2V0Rm9ybSh7IC4uLmZvcm0sIFtmaWVsZC5rZXldOiBldmVudC50YXJnZXQudmFsdWUgfSl9IHJlcXVpcmVkPXtmaWVsZC5yZXF1aXJlZH0gLz59XG4gICAgICAgIDwvbGFiZWw+KX1cbiAgICAgIDwvZGl2PlxuICAgICAge2Vycm9yICYmIDxkaXYgY2xhc3NOYW1lPVwiZXJyb3JcIj57ZXJyb3J9PC9kaXY+fVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJmb3JtLWFjdGlvbnNcIj5cbiAgICAgICAgPGJ1dHRvbiB0eXBlPVwiYnV0dG9uXCIgY2xhc3NOYW1lPVwiZ2hvc3RcIiBvbkNsaWNrPXtvbkNhbmNlbH0+Q2FuY2VsPC9idXR0b24+XG4gICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwicHJpbWFyeVwiIGRpc2FibGVkPXshcmVjb3JkICYmICFudW1iZXJQcmV2aWV3fT57cmVjb3JkID8gXCJVcGRhdGVcIiA6IFwiQ3JlYXRlXCJ9PC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Zvcm0+XG4gIDwvc2VjdGlvbj47XG59XG4iXSwiZmlsZSI6IkM6L1VzZXJzL3JhdWxtL0Rvd25sb2Fkcy9maW5hbmNlYWFwL2Zyb250ZW5kL3NyYy9jb21wb25lbnRzL01hc3RlckRhdGFGb3JtLnRzeCJ9

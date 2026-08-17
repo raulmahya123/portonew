@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="icon" type="image/png" href="logoraul.png"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Competra Assessment Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: Poppins, sans-serif; text-rendering: optimizeLegibility; }
+    p { overflow-wrap: anywhere; text-wrap: pretty; }
+    .copy { max-width: 72ch; text-align: justify; text-justify: inter-word; hyphens: auto; }
+    @media (max-width: 768px) { .copy { text-align: left; } }
+  </style>
+</head>
+<body class="bg-[#fcf9f8] text-[#1c1b1b] antialiased">
+  <header class="fixed top-0 z-50 w-full border-b border-slate-200/70 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:px-8">
+      <a href="index.html" class="inline-flex items-center"><img src="logoraul.png" alt="Raul Mahya Logo" class="h-12 lg:h-14 w-auto object-contain"></a>
+      <nav class="hidden items-center gap-8 xl:flex text-sm font-medium text-slate-600">
+        <a class="hover:text-[#00417d]" href="index.html">Beranda</a>
+        <a class="hover:text-[#00417d]" href="about.html">Profil</a>
+        <a class="hover:text-[#00417d]" href="experience.html">Pengalaman</a>
+        <a class="text-[#00417d] font-semibold" href="projects.html">Proyek</a>
+        <a class="hover:text-[#00417d]" href="technology.html">Kemampuan</a>
+      </nav>
+      <a href="https://wa.me/62881023806530" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-[#00417d] px-5 py-3 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-[#0058a6]">Diskusi Proyek</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <section class="border-b border-slate-200 bg-slate-50 px-5 py-14 lg:px-8 lg:py-20">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="mb-6 flex flex-wrap items-center gap-3">
+          <a href="projects.html" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 transition hover:text-[#00417d]">
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+            Kembali ke Proyek
+          </a>
+          <span class="h-4 w-px bg-slate-300"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-[#00417d]">Assessment | Workforce Screening</span>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <h1 class="mb-6 max-w-4xl text-4xl font-bold uppercase leading-tight text-slate-950 md:text-[56px]">Competra Assessment Platform</h1>
+            <p class="copy text-lg leading-8 text-slate-600">Platform assessment untuk screening kompetensi workforce dengan paket soal Mekanik, Operator, SHE, dan HR. Sistem ini mendukung login peserta dan admin, pengelolaan bank soal, invite peserta, pengerjaan assessment aman, review manual, sertifikat, export, dan dashboard performa.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="https://lightskyblue-quail-167707.hostingersite.com/login" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-[#00417d] px-5 py-3 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-[#0058a6]">
+                <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                Buka Live Site
+              </a>
+              <a href="projects.html" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-5 py-3 text-xs font-semibold uppercase tracking-widest text-slate-600 transition hover:border-[#00417d] hover:text-[#00417d]">
+                <span class="material-symbols-outlined text-[18px]">apps</span>
+                Project Lain
+              </a>
+            </div>
+          </div>
+          <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+            <img src="images/nexora/competra-login.png" alt="Competra assessment login page" class="h-full w-full object-cover">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-5 py-16 lg:grid-cols-12 lg:px-8 lg:py-24">
+      <div class="flex flex-col gap-10 lg:col-span-8">
+        <section>
+          <h2 class="mb-5 text-3xl font-semibold text-slate-950">Ringkasan Implementasi</h2>
+          <p class="copy text-lg leading-8 text-slate-600">Competra dibangun sebagai sistem assessment internal untuk mengukur kompetensi peserta secara lebih terstruktur. Admin dapat menyiapkan paket soal, mengatur peserta, mengirim undangan, memantau hasil, membuka assessment yang terblokir, serta melakukan review khusus untuk jawaban essay atau upload SHE. Peserta mendapatkan alur login, pengerjaan assessment, hasil, dan sertifikat jika memenuhi aturan yang ditentukan.</p>
+        </section>
+
+        <section class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="mb-3 flex items-center gap-2 text-xl font-semibold text-slate-950"><span class="material-symbols-outlined text-[#00417d]">fact_check</span> Fokus Proyek</h3>
+            <p class="copy text-slate-600">Membuat proses screening peserta lebih konsisten melalui bank soal, paket assessment, dashboard admin, scoring otomatis, review manual, dan kontrol keamanan pengerjaan.</p>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="mb-3 flex items-center gap-2 text-xl font-semibold text-slate-950"><span class="material-symbols-outlined text-[#00417d]">shield_lock</span> Dampak</h3>
+            <p class="copy text-slate-600">Assessment lebih mudah dipantau, data peserta lebih rapi, pelanggaran pengerjaan bisa ditindaklanjuti, dan hasil screening bisa diekspor atau dijadikan dokumen PDF.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="mb-6 text-2xl font-semibold text-slate-950">Fitur Utama</h2>
+          <ul class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Dashboard admin untuk total soal, paket soal, peserta, assessment selesai, terblokir, pending review, rata-rata nilai, dan completion rate</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Filter dashboard per kategori assessment: Mekanik, Operator, SHE, HR, dan tampilan semua assessment</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Paket soal dengan bank soal terpisah, preview paket, konfigurasi durasi, grade, certificate, dan segment assessment</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">CRUD soal, import soal via template, soal bergambar, multiple choice, essay, upload, point-based scoring, dan kategori operator</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Invite peserta single, banyak peserta, dan bulk invite dengan kategori invite serta email undangan assessment</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Alur peserta: login, mulai assessment, jawab soal, submit, lihat hasil, dan download sertifikat</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Security guard untuk mendeteksi violation, menyimpan jawaban sementara, blokir assessment, auto-submit, dan unblock oleh admin</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Review SHE untuk essay atau upload, pending review, grading manual, dan finalisasi nilai</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Export hasil assessment, PDF assessment, daftar jawaban peserta, dan activity log admin</span></li>
+            <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1 text-[20px] text-[#00417d]">check_circle</span><span class="text-slate-600">Interview assessment dengan template, aspek penilaian, kategori, score, export, dan riwayat hasil interview</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="mb-6 text-2xl font-semibold text-slate-950">Alur Sistem</h2>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <span class="material-symbols-outlined mb-4 block text-[28px] text-[#00417d]">library_books</span>
+              <h3 class="mb-3 text-xl font-semibold text-slate-950">Siapkan Paket</h3>
+              <p class="copy text-slate-600">Admin membuat paket, menambahkan soal, mengatur durasi, kategori, segment, dan aturan scoring sesuai kebutuhan assessment.</p>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <span class="material-symbols-outlined mb-4 block text-[28px] text-[#00417d]">person_add</span>
+              <h3 class="mb-3 text-xl font-semibold text-slate-950">Invite Peserta</h3>
+              <p class="copy text-slate-600">Peserta dibuat atau diundang melalui admin console, lalu masuk menggunakan akun yang sudah disiapkan untuk mengikuti assessment.</p>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <span class="material-symbols-outlined mb-4 block text-[28px] text-[#00417d]">analytics</span>
+              <h3 class="mb-3 text-xl font-semibold text-slate-950">Review Hasil</h3>
+              <p class="copy text-slate-600">Sistem menilai otomatis untuk soal objektif, menandai review manual untuk SHE essay/upload, dan menampilkan performa peserta di dashboard.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="mb-6 text-2xl font-semibold text-slate-950">Foto / Tampilan Proyek</h2>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm"><img src="images/nexora/competra-login.png" alt="Competra login assessment" class="h-full w-full object-cover"></figure>
+            <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm"><img src="images/nexora/competra-dashboard.png" alt="Competra admin dashboard" class="h-full w-full object-cover"></figure>
+          </div>
+        </section>
+      </div>
+
+      <aside class="lg:col-span-4">
+        <div class="sticky top-24 flex flex-col gap-7 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+          <div>
+            <span class="mb-3 block text-[11px] font-semibold uppercase tracking-widest text-slate-500">Tech Stack</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">Laravel</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">Blade</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">Tailwind CSS</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">MySQL</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">Chart.js</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">Email Invite</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">PDF Export</span>
+              <span class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-[13px] font-medium text-slate-600">RBAC</span>
+            </div>
+          </div>
+          <div class="h-px bg-slate-200"></div>
+          <div>
+            <span class="mb-2 block text-[11px] font-semibold uppercase tracking-widest text-slate-500">Peran</span>
+            <p class="font-semibold text-slate-950">Full-stack Web Engineer</p>
+          </div>
+          <div>
+            <span class="mb-2 block text-[11px] font-semibold uppercase tracking-widest text-slate-500">Entitas</span>
+            <p class="font-semibold text-slate-950">Competra / Andalan Assessment</p>
+          </div>
+          <div>
+            <span class="mb-2 block text-[11px] font-semibold uppercase tracking-widest text-slate-500">Kategori</span>
+            <p class="font-semibold text-slate-950">Mekanik, SHE, HR, Operator</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="w-full border-t border-slate-800 bg-slate-950 text-slate-200">
+    <div class="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-5 py-10 md:grid-cols-4 lg:px-8">
+      <div class="md:col-span-2">
+        <img src="logoraul.png" alt="Raul Mahya Logo" class="mb-4 h-16 w-auto object-contain">
+        <p class="copy text-slate-400">Software Engineer yang membangun aplikasi bisnis, integrasi data, otomasi, dan solusi AI dari perencanaan sampai produksi.</p>
+      </div>
+      <div>
+        <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-500">Navigasi</h2>
+        <div class="grid gap-3 text-sm text-slate-400">
+          <a href="about.html" class="hover:text-white">Tentang Raul</a>
+          <a href="experience.html" class="hover:text-white">Pengalaman</a>
+          <a href="projects.html" class="hover:text-white">Proyek</a>
+          <a href="gallery.html" class="hover:text-white">Galeri</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-500">Kontak</h2>
+        <div class="grid gap-3 text-sm text-slate-400">
+          <a href="mailto:contact@raulmahya.com" class="hover:text-white">contact@raulmahya.com</a>
+          <a href="https://linkedin.com/in/raulmahya" class="hover:text-white">LinkedIn</a>
+          <a href="https://github.com/raulmahya123" class="hover:text-white">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
